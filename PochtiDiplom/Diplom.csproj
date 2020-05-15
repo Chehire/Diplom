@@ -161,9 +161,6 @@
     <EmbeddedResource Include="FeedBackForm.resx">
       <DependentUpon>FeedBackForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LicenziatForm.resx">
-      <DependentUpon>TipRabotForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

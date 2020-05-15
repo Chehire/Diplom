@@ -503,13 +503,6 @@ namespace Compo
             {
                 ZayavkaForm Zayavka = new ZayavkaForm();
                 Program.ID_Zayavka = (int)dataGridView1.CurrentRow.Cells[0].Value;
-                Zayavka.tbName.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                Zayavka.tbFullName.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-                Zayavka.tbAdresRegs.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-                Zayavka.tbAdresFact.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-                Zayavka.mtbINN.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-                Zayavka.mtbNum.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-                Zayavka.tbEmail.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
                 Zayavka.btnAdd.Enabled = false;
                 Zayavka.Show();
 
@@ -546,7 +539,7 @@ namespace Compo
                         dataGridView1.DataSource = database.TableFill($"select [ID_TT], [TT_Name],[Price] from [dbo].[ТТ] where [TT_Name] like  '%{tbSearch.Text}%' or [Price] like '%{tbSearch.Text}%'", database.DatabaseSQL()).Tables[0];
                         break;
                     case "Compo | Заявки":
-                        dataGridView1.DataSource = database.TableFill($"select [ID_Organization] as 'ID' ,Name as 'Название компании',Full_Name as 'Полное название',Adres_Rigisrt as 'Адрес регистрации',Fact_Adres as 'Фактический адрес', INN as 'ИНН', Nomer_Organization as 'Номер',e_mail as 'e-mail' from Organization where Full_Name like '%{tbSearch.Text}%'", database.DatabaseSQL()).Tables[0];
+                        dataGridView1.DataSource = database.TableFill($"select [ID_Zayavka] as 'ID' ,Name as 'Название компании',Full_Name as 'Полное название',Adres_Rigisrt as 'Адрес регистрации',Fact_Adres as 'Фактический адрес', INN as 'ИНН', Nomer_Organization as 'Номер',e_mail as 'e-mail' from Organization where Full_Name like '%{tbSearch.Text}%'", database.DatabaseSQL()).Tables[0];
                         break;
                     case "Compo | Дежурные группы":
                         dataGridView1.DataSource = database.TableFill($"select [ID_Group],[Fam_Group],[Name_Group],[Otch_Group],[Nomer_Group] from [dbo].[Group] where [Fam_Group]+' '+[Name_Group]+' '+[Otch_Group] like '%{tbSearch.Text}%' or [Nomer_Group] like '%{tbSearch.Text}%'", database.DatabaseSQL()).Tables[0];
