@@ -35,24 +35,24 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblDatePodachi = new System.Windows.Forms.Label();
-            this.tbAdresFact = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblDataNahala = new System.Windows.Forms.Label();
             this.lblZakritia = new System.Windows.Forms.Label();
             this.lblOkonchania = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.lblSpisokRapot = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tbSpisokRabot = new System.Windows.Forms.TextBox();
+            this.tbSpisokMaterialov = new System.Windows.Forms.TextBox();
             this.lblSpisokMaterialov = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tbKimentariiGroup = new System.Windows.Forms.TextBox();
             this.lblKomentariiGroup = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.tbKomentariiTT = new System.Windows.Forms.TextBox();
             this.lblKommentariiTT = new System.Windows.Forms.Label();
             this.cbGroup = new System.Windows.Forms.ComboBox();
             this.cbStatus = new System.Windows.Forms.ComboBox();
             this.cbTT = new System.Windows.Forms.ComboBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // lblGroup
@@ -88,7 +88,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(156, 522);
+            this.btnUpdate.Location = new System.Drawing.Point(154, 522);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(136, 35);
@@ -99,7 +99,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(303, 521);
+            this.btnDelete.Location = new System.Drawing.Point(298, 522);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(136, 35);
@@ -126,28 +126,10 @@
             this.lblDatePodachi.TabIndex = 11;
             this.lblDatePodachi.Text = "Дата подачи";
             // 
-            // tbAdresFact
-            // 
-            this.tbAdresFact.Location = new System.Drawing.Point(13, 202);
-            this.tbAdresFact.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbAdresFact.MaxLength = 300;
-            this.tbAdresFact.Name = "tbAdresFact";
-            this.tbAdresFact.Size = new System.Drawing.Size(136, 26);
-            this.tbAdresFact.TabIndex = 16;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(157, 202);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.MaxLength = 300;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(136, 26);
-            this.textBox1.TabIndex = 25;
-            // 
             // lblDataNahala
             // 
             this.lblDataNahala.AutoSize = true;
-            this.lblDataNahala.Location = new System.Drawing.Point(153, 177);
+            this.lblDataNahala.Location = new System.Drawing.Point(230, 177);
             this.lblDataNahala.Name = "lblDataNahala";
             this.lblDataNahala.Size = new System.Drawing.Size(156, 20);
             this.lblDataNahala.TabIndex = 26;
@@ -165,29 +147,11 @@
             // lblOkonchania
             // 
             this.lblOkonchania.AutoSize = true;
-            this.lblOkonchania.Location = new System.Drawing.Point(153, 233);
+            this.lblOkonchania.Location = new System.Drawing.Point(230, 233);
             this.lblOkonchania.Name = "lblOkonchania";
             this.lblOkonchania.Size = new System.Drawing.Size(181, 20);
             this.lblOkonchania.TabIndex = 28;
             this.lblOkonchania.Text = "Дата окончания работ";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(13, 258);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox2.MaxLength = 300;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(136, 26);
-            this.textBox2.TabIndex = 29;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(157, 258);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox3.MaxLength = 300;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(136, 26);
-            this.textBox3.TabIndex = 30;
             // 
             // lblSpisokRapot
             // 
@@ -198,23 +162,23 @@
             this.lblSpisokRapot.TabIndex = 31;
             this.lblSpisokRapot.Text = "Список работ";
             // 
-            // textBox4
+            // tbSpisokRabot
             // 
-            this.textBox4.Location = new System.Drawing.Point(13, 315);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox4.MaxLength = 300;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(421, 26);
-            this.textBox4.TabIndex = 32;
+            this.tbSpisokRabot.Location = new System.Drawing.Point(12, 311);
+            this.tbSpisokRabot.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbSpisokRabot.MaxLength = 300;
+            this.tbSpisokRabot.Name = "tbSpisokRabot";
+            this.tbSpisokRabot.Size = new System.Drawing.Size(422, 26);
+            this.tbSpisokRabot.TabIndex = 32;
             // 
-            // textBox5
+            // tbSpisokMaterialov
             // 
-            this.textBox5.Location = new System.Drawing.Point(12, 371);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox5.MaxLength = 300;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(421, 26);
-            this.textBox5.TabIndex = 34;
+            this.tbSpisokMaterialov.Location = new System.Drawing.Point(12, 371);
+            this.tbSpisokMaterialov.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbSpisokMaterialov.MaxLength = 300;
+            this.tbSpisokMaterialov.Name = "tbSpisokMaterialov";
+            this.tbSpisokMaterialov.Size = new System.Drawing.Size(422, 26);
+            this.tbSpisokMaterialov.TabIndex = 34;
             // 
             // lblSpisokMaterialov
             // 
@@ -225,14 +189,14 @@
             this.lblSpisokMaterialov.TabIndex = 33;
             this.lblSpisokMaterialov.Text = "Список материалов";
             // 
-            // textBox6
+            // tbKimentariiGroup
             // 
-            this.textBox6.Location = new System.Drawing.Point(12, 486);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox6.MaxLength = 300;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(421, 26);
-            this.textBox6.TabIndex = 38;
+            this.tbKimentariiGroup.Location = new System.Drawing.Point(12, 486);
+            this.tbKimentariiGroup.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbKimentariiGroup.MaxLength = 300;
+            this.tbKimentariiGroup.Name = "tbKimentariiGroup";
+            this.tbKimentariiGroup.Size = new System.Drawing.Size(422, 26);
+            this.tbKimentariiGroup.TabIndex = 38;
             // 
             // lblKomentariiGroup
             // 
@@ -243,14 +207,14 @@
             this.lblKomentariiGroup.TabIndex = 37;
             this.lblKomentariiGroup.Text = "Комментарии дежурной группы";
             // 
-            // textBox7
+            // tbKomentariiTT
             // 
-            this.textBox7.Location = new System.Drawing.Point(12, 426);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox7.MaxLength = 300;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(421, 26);
-            this.textBox7.TabIndex = 36;
+            this.tbKomentariiTT.Location = new System.Drawing.Point(12, 426);
+            this.tbKomentariiTT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbKomentariiTT.MaxLength = 300;
+            this.tbKomentariiTT.Name = "tbKomentariiTT";
+            this.tbKomentariiTT.Size = new System.Drawing.Size(422, 26);
+            this.tbKomentariiTT.TabIndex = 36;
             // 
             // lblKommentariiTT
             // 
@@ -268,14 +232,16 @@
             this.cbGroup.Name = "cbGroup";
             this.cbGroup.Size = new System.Drawing.Size(422, 28);
             this.cbGroup.TabIndex = 39;
+            this.cbGroup.SelectedIndexChanged += new System.EventHandler(this.cbGroup_SelectedIndexChanged);
             // 
             // cbStatus
             // 
             this.cbStatus.FormattingEnabled = true;
-            this.cbStatus.Location = new System.Drawing.Point(12, 144);
+            this.cbStatus.Location = new System.Drawing.Point(12, 146);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(422, 28);
             this.cbStatus.TabIndex = 40;
+            this.cbStatus.SelectedIndexChanged += new System.EventHandler(this.cbStatus_SelectedIndexChanged);
             // 
             // cbTT
             // 
@@ -284,30 +250,67 @@
             this.cbTT.Name = "cbTT";
             this.cbTT.Size = new System.Drawing.Size(422, 28);
             this.cbTT.TabIndex = 41;
+            this.cbTT.SelectedIndexChanged += new System.EventHandler(this.cbTT_SelectedIndexChanged);
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(12, 204);
+            this.maskedTextBox1.Mask = "00/00/0000 90:00";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(200, 26);
+            this.maskedTextBox1.TabIndex = 42;
+            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Location = new System.Drawing.Point(234, 204);
+            this.maskedTextBox2.Mask = "00/00/0000 90:00";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(200, 26);
+            this.maskedTextBox2.TabIndex = 43;
+            this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
+            // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.Location = new System.Drawing.Point(234, 256);
+            this.maskedTextBox3.Mask = "00/00/0000 90:00";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(200, 26);
+            this.maskedTextBox3.TabIndex = 44;
+            this.maskedTextBox3.ValidatingType = typeof(System.DateTime);
+            // 
+            // maskedTextBox4
+            // 
+            this.maskedTextBox4.Location = new System.Drawing.Point(12, 257);
+            this.maskedTextBox4.Mask = "00/00/0000 90:00";
+            this.maskedTextBox4.Name = "maskedTextBox4";
+            this.maskedTextBox4.Size = new System.Drawing.Size(200, 26);
+            this.maskedTextBox4.TabIndex = 45;
+            this.maskedTextBox4.ValidatingType = typeof(System.DateTime);
             // 
             // ZayavkaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(446, 561);
+            this.Controls.Add(this.maskedTextBox4);
+            this.Controls.Add(this.maskedTextBox3);
+            this.Controls.Add(this.maskedTextBox2);
+            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.cbTT);
             this.Controls.Add(this.cbStatus);
             this.Controls.Add(this.cbGroup);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.tbKimentariiGroup);
             this.Controls.Add(this.lblKomentariiGroup);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.tbKomentariiTT);
             this.Controls.Add(this.lblKommentariiTT);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.tbSpisokMaterialov);
             this.Controls.Add(this.lblSpisokMaterialov);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tbSpisokRabot);
             this.Controls.Add(this.lblSpisokRapot);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.lblOkonchania);
             this.Controls.Add(this.lblZakritia);
             this.Controls.Add(this.lblDataNahala);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.tbAdresFact);
             this.Controls.Add(this.lblDatePodachi);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.btnDelete);
@@ -332,23 +335,23 @@
         public System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label lblDatePodachi;
-        public System.Windows.Forms.TextBox tbAdresFact;
-        public System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblDataNahala;
         private System.Windows.Forms.Label lblZakritia;
         private System.Windows.Forms.Label lblOkonchania;
-        public System.Windows.Forms.TextBox textBox2;
-        public System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label lblSpisokRapot;
-        public System.Windows.Forms.TextBox textBox4;
-        public System.Windows.Forms.TextBox textBox5;
+        public System.Windows.Forms.TextBox tbSpisokRabot;
+        public System.Windows.Forms.TextBox tbSpisokMaterialov;
         private System.Windows.Forms.Label lblSpisokMaterialov;
-        public System.Windows.Forms.TextBox textBox6;
+        public System.Windows.Forms.TextBox tbKimentariiGroup;
         private System.Windows.Forms.Label lblKomentariiGroup;
-        public System.Windows.Forms.TextBox textBox7;
+        public System.Windows.Forms.TextBox tbKomentariiTT;
         private System.Windows.Forms.Label lblKommentariiTT;
         private System.Windows.Forms.ComboBox cbGroup;
         private System.Windows.Forms.ComboBox cbStatus;
         private System.Windows.Forms.ComboBox cbTT;
+        public System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        public System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        public System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        public System.Windows.Forms.MaskedTextBox maskedTextBox4;
     }
 }

@@ -104,9 +104,9 @@ namespace Compo
 
         private void AboutBox_Load(object sender, EventArgs e)
         {
-            textBoxDescription.Text = "== Dry Cleaning ==" +
-                "\r\n\r\nЭта программа представляет собой информационную систему для предприятия \"Химчистка\"" +
-                "\r\n\r\nСоздано Андреем Ивановым. (C)2019";
+            textBoxDescription.Text = "== Compo ==" +
+                "\r\n\r\nЭта программа представляет собой информационную систему для предприятия \"Compo\"" +
+                "\r\n\r\nСоздано Андреем Ивановым. (C)2020";
         }
 
         private void button1_Click(object sender, EventArgs e)

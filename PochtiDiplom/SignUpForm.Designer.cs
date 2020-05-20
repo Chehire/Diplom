@@ -40,6 +40,8 @@
             this.lblRepPas = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lblDateBirth = new System.Windows.Forms.Label();
+            this.mtbDateBirth = new System.Windows.Forms.MaskedTextBox();
             this.mtbNum = new System.Windows.Forms.MaskedTextBox();
             this.mtbSer = new System.Windows.Forms.MaskedTextBox();
             this.lblNum = new System.Windows.Forms.Label();
@@ -179,6 +181,8 @@
             // tabPage1
             // 
             this.tabPage1.AllowDrop = true;
+            this.tabPage1.Controls.Add(this.lblDateBirth);
+            this.tabPage1.Controls.Add(this.mtbDateBirth);
             this.tabPage1.Controls.Add(this.mtbNum);
             this.tabPage1.Controls.Add(this.mtbSer);
             this.tabPage1.Controls.Add(this.lblNum);
@@ -196,6 +200,24 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Персональные данные";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // lblDateBirth
+            // 
+            this.lblDateBirth.AutoSize = true;
+            this.lblDateBirth.Location = new System.Drawing.Point(7, 223);
+            this.lblDateBirth.Name = "lblDateBirth";
+            this.lblDateBirth.Size = new System.Drawing.Size(128, 20);
+            this.lblDateBirth.TabIndex = 34;
+            this.lblDateBirth.Text = "Дата рождения";
+            // 
+            // mtbDateBirth
+            // 
+            this.mtbDateBirth.Location = new System.Drawing.Point(11, 246);
+            this.mtbDateBirth.Mask = "00/00/0000";
+            this.mtbDateBirth.Name = "mtbDateBirth";
+            this.mtbDateBirth.Size = new System.Drawing.Size(173, 26);
+            this.mtbDateBirth.TabIndex = 33;
+            this.mtbDateBirth.ValidatingType = typeof(System.DateTime);
             // 
             // mtbNum
             // 
@@ -284,7 +306,7 @@
             // lblFam
             // 
             this.lblFam.AutoSize = true;
-            this.lblFam.Location = new System.Drawing.Point(3, 3);
+            this.lblFam.Location = new System.Drawing.Point(7, 3);
             this.lblFam.Name = "lblFam";
             this.lblFam.Size = new System.Drawing.Size(81, 20);
             this.lblFam.TabIndex = 0;
@@ -369,5 +391,7 @@
         public System.Windows.Forms.Button btnUpdate;
         public System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Label lblDateBirth;
+        public System.Windows.Forms.MaskedTextBox mtbDateBirth;
     }
 }

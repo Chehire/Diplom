@@ -38,6 +38,7 @@
             // tbNewPassword
             // 
             this.tbNewPassword.Location = new System.Drawing.Point(12, 32);
+            this.tbNewPassword.MaxLength = 16;
             this.tbNewPassword.Name = "tbNewPassword";
             this.tbNewPassword.Size = new System.Drawing.Size(203, 26);
             this.tbNewPassword.TabIndex = 0;
@@ -63,6 +64,7 @@
             // tbRepNewPassword
             // 
             this.tbRepNewPassword.Location = new System.Drawing.Point(12, 84);
+            this.tbRepNewPassword.MaxLength = 16;
             this.tbRepNewPassword.Name = "tbRepNewPassword";
             this.tbRepNewPassword.Size = new System.Drawing.Size(203, 26);
             this.tbRepNewPassword.TabIndex = 3;

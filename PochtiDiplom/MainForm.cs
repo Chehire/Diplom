@@ -100,33 +100,34 @@ namespace Compo
             {
                 Restriction();
             }
-            if (Program.ID_Dolj == 4) //Кассир
+            if (Program.ID_Dolj == 4) //Бухгалтер
             {
                 Restriction();
-                doljToolStripMenuItem.Visible = false;
-                employeeListToolStripMenuItem.Visible = false;
-                ZayavkaToolStripMenuItem.Visible = false;
-                TipRabotToolStripMenuItem.Visible = false;
+                //doljToolStripMenuItem.Visible = false;
+                //employeeListToolStripMenuItem.Visible = false;
+                //TTToolStripMenuItem.Visible = false;
+                //ZayavkaToolStripMenuItem.Visible = false;
+                //TipRabotoolStripMenuItem.Visible = false;
 
             }
-            if (Program.ID_Dolj == 5) //Работник С НМА
+            if (Program.ID_Dolj == 5) //Cтарший инженер
             {
                 Restriction();
-                doljToolStripMenuItem.Visible = false;
-                employeeListToolStripMenuItem.Visible = false;
-                TTToolStripMenuItem.Visible = false;
-                GroupToolStripMenuItem.Visible = false;
-                StatusToolStripMenuItem.Visible = false;
+                //doljToolStripMenuItem.Visible = false;
+                //employeeListToolStripMenuItem.Visible = false;
+                //TTToolStripMenuItem.Visible = false;
+                //TipRabotoolStripMenuItem.Visible = false;
+                //GroupToolStripMenuItem.Visible = false;
+                //StatusToolStripMenuItem.Visible = false;
 
             }
-            if (Program.ID_Dolj == 6) //Кадровик
+            if (Program.ID_Dolj == 6) //Инженер
             {
                 Restriction();
-                TTToolStripMenuItem.Visible = false;
-                GroupToolStripMenuItem.Visible = false;
-                StatusToolStripMenuItem.Visible = false;
-                ZayavkaToolStripMenuItem.Visible = false;
-                TipRabotToolStripMenuItem.Visible = false;
+                //TTToolStripMenuItem.Visible = false;
+                //GroupToolStripMenuItem.Visible = false;
+                //ZayavkaToolStripMenuItem.Visible = false;
+                //TipRabotoolStripMenuItem.Visible = false;
             }
         }
 
@@ -138,7 +139,7 @@ namespace Compo
             TTToolStripMenuItem.Visible = true;
             StatusToolStripMenuItem.Visible = true;
             ZayavkaToolStripMenuItem.Visible = true;
-            TipRabotToolStripMenuItem.Visible = true;
+            TipRabotoolStripMenuItem.Visible = true;
         }
 
         private void DataGridView1_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
@@ -272,9 +273,14 @@ namespace Compo
             ShowZayavka();
         }
 
-        private void TipRabotToolStripMenuItem_Click(object sender, EventArgs e)
+        private void TipRabotoolStripMenuItem_Click(object sender, EventArgs e)
         {
             ShowTipRabot();
+        }
+
+        private void VipolnennieRabotiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowVipolnennieraboti();
         }
 
         private void ShowDolj()
@@ -298,7 +304,7 @@ namespace Compo
                 if (Program.ID_Dolj == 1)
                     dataGridView1.DataSource = database.TableFill("select * from View_Sotr", database.DatabaseSQL()).Tables[0];
                 else
-                    dataGridView1.DataSource = database.TableFill("select [ID],[Фамилия],[Имя],[Отчество],[Серия паспорта],[Номер паспорта],[Должность],[Оклад], from View_Sotr where [Sotr_Logical_Delete] = 0", database.DatabaseSQL()).Tables[0];
+                    dataGridView1.DataSource = database.TableFill("select [ID],[Фамилия],[Имя],[Отчество],[Серия паспорта],[Номер паспорта],[Дата рождения],[Должность],[Оклад], from View_Sotr where [Sotr_Logical_Delete] = 0", database.DatabaseSQL()).Tables[0];
             }
             database.DatabaseSQL().Close();
         }
@@ -324,7 +330,7 @@ namespace Compo
                 if (Program.ID_Dolj == 1)
                     dataGridView1.DataSource = database.TableFill("select * from View_Group", database.DatabaseSQL()).Tables[0];
                 else
-                    dataGridView1.DataSource = database.TableFill("select 'Фамилия','Имя','Отчество','Номер группы','Дата'from from View_Group where [Group_Logical_Delete] = 0", database.DatabaseSQL()).Tables[0];
+                    dataGridView1.DataSource = database.TableFill("select 'ФИО','Номер группы','Дата'from from View_Group where [Group_Logical_Delete] = 0", database.DatabaseSQL()).Tables[0];
             }
             database.DatabaseSQL().Close();
         }
@@ -367,7 +373,17 @@ namespace Compo
                 if (Program.ID_Dolj == 1)
                     dataGridView1.DataSource = database.TableFill("select [ID_Tip_Rabot] as 'ID', [Name_Tip_Rabot] as 'Тип работы', [Tip_Rabot_Logical_Delete] from [dbo].[Tip_Rabot]", database.DatabaseSQL()).Tables[0];
                 else
-                    dataGridView1.DataSource = database.TableFill("select [ID_Tip_Rabot] as 'ID', [Name_Tip_Rabot] as 'Тип работы', [Tip_Rabot_Logical_Delete] from [dbo].[Tip_Rabot] where [TipRabott_Logical_Delete] = 0", database.DatabaseSQL()).Tables[0];
+                    dataGridView1.DataSource = database.TableFill("select [ID_Tip_Rabot] as 'ID', [Name_Tip_Rabot] as 'Тип работы', [Tip_Rabot_Logical_Delete] from [dbo].[Tip_Rabot] where [TipRabot_Logical_Delete] = 0", database.DatabaseSQL()).Tables[0];
+            }
+            database.DatabaseSQL().Close();
+        }
+
+        private void ShowVipolnennieraboti()
+        {
+            this.Text = "Compo | Выполненные раоты";
+            database.DatabaseSQL().Open();
+            {
+                    dataGridView1.DataSource = database.TableFill("select * from View_Vip_no_Rabot", database.DatabaseSQL()).Tables[0];
             }
             database.DatabaseSQL().Close();
         }
@@ -464,27 +480,28 @@ namespace Compo
                 Employee.tbOtch.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
                 Employee.mtbSer.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
                 Employee.mtbNum.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-                Employee.cbDolj.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                Employee.mtbDateBirth.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                Employee.cbDolj.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
                 Employee.btnAdd.Enabled = false;
                 Employee.ShowDialog();
             }
 
             if (this.Text == "Compo | Торговые точки")
             {
-                TTForm PriceList = new TTForm();
+                TTForm TT = new TTForm();
                 Program.ID_TT = (int)dataGridView1.CurrentRow.Cells[0].Value;
-                PriceList.tbNameTT.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                PriceList.tbPrice.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-                PriceList.tbAdres.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-                PriceList.btnAdd.Enabled = false;
-                PriceList.ShowDialog();
+                TT.tbNameTT.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                TT.tbPrice.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                TT.tbAdres.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                TT.btnAdd.Enabled = false;
+                TT.ShowDialog();
             }
 
             if (this.Text == "Compo | Дежурные группы")
             {
                 GroupForm Group = new GroupForm();
                 Program.ID_Group = (int)dataGridView1.CurrentRow.Cells[0].Value;
-                Group.tbDate.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                Group.mtbDate.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
                 Group.btnAdd.Enabled = false;
                 Group.ShowDialog();
             }
@@ -511,7 +528,7 @@ namespace Compo
             if (this.Text == "Compo | Типы работ")
             {
                 TipRabotForm TipRabot = new TipRabotForm();
-                Program.ID_TipRabott = (int)dataGridView1.CurrentRow.Cells[0].Value;
+                Program.ID_TipRabot = (int)dataGridView1.CurrentRow.Cells[0].Value;
                 TipRabot.tbTipRabot.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
                 TipRabot.btnAdd.Enabled = false;
                 TipRabot.ShowDialog();
@@ -545,10 +562,10 @@ namespace Compo
                         dataGridView1.DataSource = database.TableFill($"select [ID_Group],[Fam_Group],[Name_Group],[Otch_Group],[Nomer_Group] from [dbo].[Group] where [Fam_Group]+' '+[Name_Group]+' '+[Otch_Group] like '%{tbSearch.Text}%' or [Nomer_Group] like '%{tbSearch.Text}%'", database.DatabaseSQL()).Tables[0];
                         break;
                     case "Compo | Типы работ":
-                        dataGridView1.DataSource = database.TableFill($"select [ID_TipRabott] as [ID], [INN_TipRabott] as [ИНН],[Fam_TipRabott] as [Фамилия],[Name_TipRabott]as [Имя], [Otch_TipRabott] as [Отчество], [Adres_TipRabott] as [Адрес],[Fact_Adres] as [Фактический адрес], [Nomer_TipRabott] as [Моб. номер], [e_mail_TipRabott] as [E-mail] from [dbo].[TipRabott] where [Fam_TipRabott]+' '+[Name_TipRabott]+' '+[Otch_TipRabott] like '%{tbSearch.Text}%' ", database.DatabaseSQL()).Tables[0];
+                        dataGridView1.DataSource = database.TableFill($"select [ID_TipRabot] as [ID], [INN_TipRabot] as [ИНН],[Fam_TipRabot] as [Фамилия],[Name_TipRabot]as [Имя], [Otch_TipRabot] as [Отчество], [Adres_TipRabot] as [Адрес],[Fact_Adres] as [Фактический адрес], [Nomer_TipRabot] as [Моб. номер], [e_mail_TipRabot] as [E-mail] from [dbo].[TipRabot] where [Fam_TipRabot]+' '+[Name_TipRabot]+' '+[Otch_TipRabot] like '%{tbSearch.Text}%' ", database.DatabaseSQL()).Tables[0];
                         break;
                     case "Compo | Сотрудники":
-                        dataGridView1.DataSource = database.TableFill($"select [ID],[Фамилия],[Имя],[Отчество],[Серия паспорта],[Номер паспорта],[Должность],[Оклад],[Дата приема],[Дата увольнения] from View_Sotr where [Фамилия]+' '+[Имя]+' '+[Отчество] like '%{tbSearch.Text}%'", database.DatabaseSQL()).Tables[0];
+                        dataGridView1.DataSource = database.TableFill($"select [ID],[Фамилия],[Имя],[Отчество],[Серия паспорта],[Номер паспорта],[Дата рождения],[Должность],[Оклад],[Дата приема],[Дата увольнения] from View_Sotr where [Фамилия]+' '+[Имя]+' '+[Отчество] like '%{tbSearch.Text}%'", database.DatabaseSQL()).Tables[0];
                         break;
                 }
             }
@@ -601,6 +618,9 @@ namespace Compo
                     break;
                 case "Compo | Типы работ":
                     ShowTipRabot();
+                    break;
+                case "Compo | Выполненные раоты":
+                    ShowVipolnennieraboti();
                     break;
             }
         }
@@ -818,6 +838,7 @@ namespace Compo
                 chart_statistic.Series[0].Points.AddXY(Convert.ToString(bal2), Convert.ToString(bal1)); ss++;
             }
         }
+
     }
 }
 

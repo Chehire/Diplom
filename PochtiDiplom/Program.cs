@@ -16,10 +16,8 @@ namespace Compo
         public static int ID_TT;
         public static int ID_Group;
         public static int ID_Status;
-        public static int ID_Card;
-        public static int ID_TipRabott;
+        public static int ID;
         public static int ID_TipRabot;
-        public static int ID_LicDoc;
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>

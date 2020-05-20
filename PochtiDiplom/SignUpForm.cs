@@ -91,6 +91,7 @@ namespace Compo
                         sqlCommand.Parameters.AddWithValue("@Otch_Sotr", tbOtch.Text);
                         sqlCommand.Parameters.AddWithValue("@Ser_Pas", mtbSer.Text);
                         sqlCommand.Parameters.AddWithValue("@Num_Pas", mtbNum.Text);
+                        sqlCommand.Parameters.AddWithValue("@Date_Birth", mtbDateBirth.Text);
                         sqlCommand.Parameters.AddWithValue("@Login_Sotr", tbLogin.Text);
                         sqlCommand.Parameters.AddWithValue("@Password_Sotr", passwordHash);
                         sqlCommand.Parameters.AddWithValue("@Dolj_ID", Program.ID_Position);

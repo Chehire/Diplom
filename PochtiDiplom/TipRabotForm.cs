@@ -57,7 +57,7 @@ namespace Compo
             {
                 SqlCommand sqlCommand = new SqlCommand("Tip_Rabot_Update", database.DatabaseSQL());
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.AddWithValue("@ID_Tip_Rabot", Program.ID_TipRabott);
+                sqlCommand.Parameters.AddWithValue("@ID_Tip_Rabot", Program.ID_TipRabot);
                 sqlCommand.Parameters.AddWithValue("@Name_Tip_Rabot", tbTipRabot.Text);
                 sqlCommand.Parameters.AddWithValue("@Tip_Rabot_Logical_Delete", 0);
                 sqlCommand.ExecuteNonQuery();
@@ -80,14 +80,14 @@ namespace Compo
                 {
                     SqlCommand sqlCommand = new SqlCommand("Tip_Rabot_Delete", database.DatabaseSQL());
                     sqlCommand.CommandType = CommandType.StoredProcedure;
-                    sqlCommand.Parameters.AddWithValue("@ID_Tip_Rabot", Program.ID_TipRabott);
+                    sqlCommand.Parameters.AddWithValue("@ID_Tip_Rabot", Program.ID_TipRabot);
                     sqlCommand.ExecuteNonQuery();
                 }
                 else
                 {
                     SqlCommand sqlCommand = new SqlCommand("Tip_Rabot_Logical_Delete", database.DatabaseSQL());
                     sqlCommand.CommandType = CommandType.StoredProcedure;
-                    sqlCommand.Parameters.AddWithValue("@ID_Tip_Rabot", Program.ID_TipRabott);
+                    sqlCommand.Parameters.AddWithValue("@ID_Tip_Rabot", Program.ID_TipRabot);
                     sqlCommand.ExecuteNonQuery();
                 }
                 MessageBox.Show("Тип работ добавлен удален");

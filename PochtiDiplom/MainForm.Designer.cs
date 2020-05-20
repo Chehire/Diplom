@@ -48,7 +48,7 @@
             this.GroupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ZayavkaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.TipRabotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TipRabotoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ОбновитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.проверкаНеобходимогоПОToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,6 +66,7 @@
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.chart_statistic = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.VipolnennieRabotiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -161,7 +162,8 @@
             this.GroupToolStripMenuItem,
             this.StatusToolStripMenuItem,
             this.ZayavkaToolStripMenuItem,
-            this.TipRabotToolStripMenuItem});
+            this.TipRabotoolStripMenuItem,
+            this.VipolnennieRabotiToolStripMenuItem});
             this.dirToolStripMenuItem.Name = "dirToolStripMenuItem";
             this.dirToolStripMenuItem.Size = new System.Drawing.Size(135, 29);
             this.dirToolStripMenuItem.Text = "Справочники";
@@ -169,51 +171,51 @@
             // doljToolStripMenuItem
             // 
             this.doljToolStripMenuItem.Name = "doljToolStripMenuItem";
-            this.doljToolStripMenuItem.Size = new System.Drawing.Size(295, 30);
+            this.doljToolStripMenuItem.Size = new System.Drawing.Size(326, 30);
             this.doljToolStripMenuItem.Text = "Список должностей";
             this.doljToolStripMenuItem.Click += new System.EventHandler(this.DoljToolStripMenuItem_Click);
             // 
             // employeeListToolStripMenuItem
             // 
             this.employeeListToolStripMenuItem.Name = "employeeListToolStripMenuItem";
-            this.employeeListToolStripMenuItem.Size = new System.Drawing.Size(295, 30);
-            this.employeeListToolStripMenuItem.Text = "Сотрудники";
+            this.employeeListToolStripMenuItem.Size = new System.Drawing.Size(326, 30);
+            this.employeeListToolStripMenuItem.Text = "Список сотрудников";
             this.employeeListToolStripMenuItem.Click += new System.EventHandler(this.EmployeeListToolStripMenuItem_Click);
             // 
             // TTToolStripMenuItem
             // 
             this.TTToolStripMenuItem.Name = "TTToolStripMenuItem";
-            this.TTToolStripMenuItem.Size = new System.Drawing.Size(295, 30);
+            this.TTToolStripMenuItem.Size = new System.Drawing.Size(326, 30);
             this.TTToolStripMenuItem.Text = "Список торговых точек";
             this.TTToolStripMenuItem.Click += new System.EventHandler(this.TTToolStripMenuItem_Click);
             // 
             // GroupToolStripMenuItem
             // 
             this.GroupToolStripMenuItem.Name = "GroupToolStripMenuItem";
-            this.GroupToolStripMenuItem.Size = new System.Drawing.Size(295, 30);
+            this.GroupToolStripMenuItem.Size = new System.Drawing.Size(326, 30);
             this.GroupToolStripMenuItem.Text = "Список дежурных групп";
             this.GroupToolStripMenuItem.Click += new System.EventHandler(this.GroupToolStripMenuItem_Click);
             // 
             // StatusToolStripMenuItem
             // 
             this.StatusToolStripMenuItem.Name = "StatusToolStripMenuItem";
-            this.StatusToolStripMenuItem.Size = new System.Drawing.Size(295, 30);
+            this.StatusToolStripMenuItem.Size = new System.Drawing.Size(326, 30);
             this.StatusToolStripMenuItem.Text = "Список статусов";
             this.StatusToolStripMenuItem.Click += new System.EventHandler(this.StatusToolStripMenuItem_Click);
             // 
             // ZayavkaToolStripMenuItem
             // 
             this.ZayavkaToolStripMenuItem.Name = "ZayavkaToolStripMenuItem";
-            this.ZayavkaToolStripMenuItem.Size = new System.Drawing.Size(295, 30);
+            this.ZayavkaToolStripMenuItem.Size = new System.Drawing.Size(326, 30);
             this.ZayavkaToolStripMenuItem.Text = "Список заявок";
             this.ZayavkaToolStripMenuItem.Click += new System.EventHandler(this.ZayavkaToolStripMenuItem_Click);
             // 
-            // TipRabotToolStripMenuItem
+            // TipRabotoolStripMenuItem
             // 
-            this.TipRabotToolStripMenuItem.Name = "TipRabotToolStripMenuItem";
-            this.TipRabotToolStripMenuItem.Size = new System.Drawing.Size(295, 30);
-            this.TipRabotToolStripMenuItem.Text = "Список типов работ";
-            this.TipRabotToolStripMenuItem.Click += new System.EventHandler(this.TipRabotToolStripMenuItem_Click);
+            this.TipRabotoolStripMenuItem.Name = "TipRabotoolStripMenuItem";
+            this.TipRabotoolStripMenuItem.Size = new System.Drawing.Size(326, 30);
+            this.TipRabotoolStripMenuItem.Text = "Список типов работ";
+            this.TipRabotoolStripMenuItem.Click += new System.EventHandler(this.TipRabotoolStripMenuItem_Click);
             // 
             // ОбновитьToolStripMenuItem
             // 
@@ -358,6 +360,13 @@
             this.chart_statistic.TabIndex = 4;
             this.chart_statistic.Text = "chart1";
             // 
+            // VipolnennieRabotiToolStripMenuItem
+            // 
+            this.VipolnennieRabotiToolStripMenuItem.Name = "VipolnennieRabotiToolStripMenuItem";
+            this.VipolnennieRabotiToolStripMenuItem.Size = new System.Drawing.Size(326, 30);
+            this.VipolnennieRabotiToolStripMenuItem.Text = "Список выполненных работ";
+            this.VipolnennieRabotiToolStripMenuItem.Click += new System.EventHandler(this.VipolnennieRabotiToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -400,7 +409,7 @@
         private System.Windows.Forms.ToolStripMenuItem TTToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ZayavkaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem GroupToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem TipRabotToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TipRabotoolStripMenuItem;
         private System.Windows.Forms.TextBox tbSearch;
         private System.Windows.Forms.ToolStripMenuItem ОбновитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ВыводToolStripMenuItem;
@@ -420,6 +429,7 @@
         private System.Windows.Forms.ToolStripMenuItem проверкаНаличияMSOfficeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem staticToolStripMenuItem;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_statistic;
+        private System.Windows.Forms.ToolStripMenuItem VipolnennieRabotiToolStripMenuItem;
     }
 }
 

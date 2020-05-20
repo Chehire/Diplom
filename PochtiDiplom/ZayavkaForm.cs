@@ -45,6 +45,48 @@ namespace Compo
             database.DatabaseSQL().Close();
         }
 
+        private void cbGroup_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                database.DatabaseSQL().Open();
+                {
+                    SqlCommand cmd = new SqlCommand($"select ID_Group from [dbo].[Group] where ID_Group = '{cbGroup.Text}'", database.DatabaseSQL());
+                    Program.ID_Group = (int)cmd.ExecuteScalar();
+                }
+                database.DatabaseSQL().Close();
+            }
+            catch { }
+        }
+
+        private void cbTT_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                database.DatabaseSQL().Open();
+                {
+                    SqlCommand cmd = new SqlCommand($"select ID_TT from [dbo].[TT] where TT_Name = '{cbTT.Text}'", database.DatabaseSQL());
+                    Program.ID_TT = (int)cmd.ExecuteScalar();
+                }
+                database.DatabaseSQL().Close();
+            }
+            catch { }
+        }
+
+        private void cbStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                database.DatabaseSQL().Open();
+                {
+                    SqlCommand cmd = new SqlCommand($"select ID_Status from [dbo].[Status] where Status_Name = '{cbStatus.Text}'", database.DatabaseSQL());
+                    Program.ID_Status = (int)cmd.ExecuteScalar();
+                }
+                database.DatabaseSQL().Close();
+            }
+            catch { }
+        }
+
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             database.DatabaseSQL().Open();
@@ -52,7 +94,19 @@ namespace Compo
             {   
                 SqlCommand sqlCommand = new SqlCommand("Zayavka_Insert", database.DatabaseSQL());
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.ExecuteNonQuery();
+                //sqlCommand.Parameters.AddWithValue("@Group_ID", Program.ID_Group);
+                //sqlCommand.Parameters.AddWithValue("@TT_ID", Program.ID_TT);
+                //sqlCommand.Parameters.AddWithValue("@Status_ID", Program.ID_Status);
+                //sqlCommand.Parameters.AddWithValue("@Data_Podachi", dateTimePicker1.Value);
+                //sqlCommand.Parameters.AddWithValue("@Data_Nachala_Rabot", dateTimePicker1.Value);
+                //sqlCommand.Parameters.AddWithValue("@Data_Okonchania_Rabot", dateTimePicker1.Value);
+                //sqlCommand.Parameters.AddWithValue("@Data_Zakritia_Zayavki", dateTimePicker1.Value);
+                //sqlCommand.Parameters.AddWithValue("@Spisok_Rapot", tbSpisokRabot.Text);
+                //sqlCommand.Parameters.AddWithValue("@Spisok_Materialov",tbSpisokMaterialov.Text);
+                //sqlCommand.Parameters.AddWithValue("@Kommentariy_TT", tbKomentariiTT.Text);
+                //sqlCommand.Parameters.AddWithValue("@Kommentariy_Group", tbKimentariiGroup.Text);
+                //sqlCommand.Parameters.AddWithValue("Zayavka_Logical_Delete", 0);
+                //sqlCommand.ExecuteNonQuery();
                 MessageBox.Show("Заявка добавлена");
                 this.Hide();
             }
@@ -68,9 +122,20 @@ namespace Compo
             database.DatabaseSQL().Open();
             try
             {
-                    SqlCommand sqlCommand = new SqlCommand("Zayavka_Update", database.DatabaseSQL());
-                    sqlCommand.CommandType = CommandType.StoredProcedure;
-                    sqlCommand.ExecuteNonQuery();
+                SqlCommand sqlCommand = new SqlCommand("Zayavka_Update", database.DatabaseSQL());
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                //sqlCommand.Parameters.AddWithValue("@ID_Zayavka", Program.ID_Zayavka);
+                //sqlCommand.Parameters.AddWithValue("@Group_ID", Program.ID_Group);
+                //sqlCommand.Parameters.AddWithValue("@TT_ID", Program.ID_TT);
+                //sqlCommand.Parameters.AddWithValue("@Status_ID", Program.ID_Status);
+                //sqlCommand.Parameters.AddWithValue("@Data_Podachi", dateTimePicker1.Value);
+                //sqlCommand.Parameters.AddWithValue("@Data_Nachala_Rabot", tbDataNachala.Text);
+                //sqlCommand.Parameters.AddWithValue("@Data_Okonchania_Rabot", tbDataOkonchania.Text);
+                //sqlCommand.Parameters.AddWithValue("@Data_Zakritia_Zayavki", tbDataZakritia);
+                //sqlCommand.Parameters.AddWithValue("@Spisok_Rapot", tbSpisokRabot.Text);
+                //sqlCommand.Parameters.AddWithValue("@Spisok_Materialov", tbSpisokMaterialov);
+                //sqlCommand.Parameters.AddWithValue("@Kommentariy_TT", tbKomentariiTT.Text);
+                //sqlCommand.ExecuteNonQuery();
                 MessageBox.Show("Заявка изменена");
                 this.Hide();
             }
