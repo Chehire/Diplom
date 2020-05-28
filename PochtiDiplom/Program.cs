@@ -18,6 +18,7 @@ namespace Compo
         public static int ID_Status;
         public static int ID;
         public static int ID_TipRabot;
+        public static int ID_Vip_no_Rabot;
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>

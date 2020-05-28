@@ -40,7 +40,7 @@
             this.tbNewPassword.Location = new System.Drawing.Point(12, 32);
             this.tbNewPassword.MaxLength = 16;
             this.tbNewPassword.Name = "tbNewPassword";
-            this.tbNewPassword.Size = new System.Drawing.Size(203, 26);
+            this.tbNewPassword.Size = new System.Drawing.Size(358, 26);
             this.tbNewPassword.TabIndex = 0;
             // 
             // lblNewPassword
@@ -66,14 +66,14 @@
             this.tbRepNewPassword.Location = new System.Drawing.Point(12, 84);
             this.tbRepNewPassword.MaxLength = 16;
             this.tbRepNewPassword.Name = "tbRepNewPassword";
-            this.tbRepNewPassword.Size = new System.Drawing.Size(203, 26);
+            this.tbRepNewPassword.Size = new System.Drawing.Size(358, 26);
             this.tbRepNewPassword.TabIndex = 3;
             // 
             // btnChangePassword
             // 
             this.btnChangePassword.Location = new System.Drawing.Point(12, 116);
             this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.Size = new System.Drawing.Size(203, 49);
+            this.btnChangePassword.Size = new System.Drawing.Size(358, 49);
             this.btnChangePassword.TabIndex = 4;
             this.btnChangePassword.Text = "Сменить пароль";
             this.btnChangePassword.UseVisualStyleBackColor = true;
@@ -83,7 +83,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(389, 175);
+            this.ClientSize = new System.Drawing.Size(382, 175);
             this.Controls.Add(this.btnChangePassword);
             this.Controls.Add(this.tbRepNewPassword);
             this.Controls.Add(this.lblRepNewPassword);

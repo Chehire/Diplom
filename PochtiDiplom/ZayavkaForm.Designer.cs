@@ -49,10 +49,10 @@
             this.cbGroup = new System.Windows.Forms.ComboBox();
             this.cbStatus = new System.Windows.Forms.ComboBox();
             this.cbTT = new System.Windows.Forms.ComboBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
+            this.mtbDataPodachi = new System.Windows.Forms.MaskedTextBox();
+            this.mtbDataNachala = new System.Windows.Forms.MaskedTextBox();
+            this.mtbOkonchaniya = new System.Windows.Forms.MaskedTextBox();
+            this.mtbZakritiya = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // lblGroup
@@ -252,51 +252,51 @@
             this.cbTT.TabIndex = 41;
             this.cbTT.SelectedIndexChanged += new System.EventHandler(this.cbTT_SelectedIndexChanged);
             // 
-            // maskedTextBox1
+            // mtbDataPodachi
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(12, 204);
-            this.maskedTextBox1.Mask = "00/00/0000 90:00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(200, 26);
-            this.maskedTextBox1.TabIndex = 42;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            this.mtbDataPodachi.Location = new System.Drawing.Point(12, 204);
+            this.mtbDataPodachi.Mask = "00/00/0000 90:00";
+            this.mtbDataPodachi.Name = "mtbDataPodachi";
+            this.mtbDataPodachi.Size = new System.Drawing.Size(200, 26);
+            this.mtbDataPodachi.TabIndex = 42;
+            this.mtbDataPodachi.ValidatingType = typeof(System.DateTime);
             // 
-            // maskedTextBox2
+            // mtbDataNachala
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(234, 204);
-            this.maskedTextBox2.Mask = "00/00/0000 90:00";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(200, 26);
-            this.maskedTextBox2.TabIndex = 43;
-            this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
+            this.mtbDataNachala.Location = new System.Drawing.Point(234, 204);
+            this.mtbDataNachala.Mask = "00/00/0000 90:00";
+            this.mtbDataNachala.Name = "mtbDataNachala";
+            this.mtbDataNachala.Size = new System.Drawing.Size(200, 26);
+            this.mtbDataNachala.TabIndex = 43;
+            this.mtbDataNachala.ValidatingType = typeof(System.DateTime);
             // 
-            // maskedTextBox3
+            // mtbOkonchaniya
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(234, 256);
-            this.maskedTextBox3.Mask = "00/00/0000 90:00";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(200, 26);
-            this.maskedTextBox3.TabIndex = 44;
-            this.maskedTextBox3.ValidatingType = typeof(System.DateTime);
+            this.mtbOkonchaniya.Location = new System.Drawing.Point(234, 256);
+            this.mtbOkonchaniya.Mask = "00/00/0000 90:00";
+            this.mtbOkonchaniya.Name = "mtbOkonchaniya";
+            this.mtbOkonchaniya.Size = new System.Drawing.Size(200, 26);
+            this.mtbOkonchaniya.TabIndex = 44;
+            this.mtbOkonchaniya.ValidatingType = typeof(System.DateTime);
             // 
-            // maskedTextBox4
+            // mtbZakritiya
             // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(12, 257);
-            this.maskedTextBox4.Mask = "00/00/0000 90:00";
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(200, 26);
-            this.maskedTextBox4.TabIndex = 45;
-            this.maskedTextBox4.ValidatingType = typeof(System.DateTime);
+            this.mtbZakritiya.Location = new System.Drawing.Point(12, 257);
+            this.mtbZakritiya.Mask = "00/00/0000 90:00";
+            this.mtbZakritiya.Name = "mtbZakritiya";
+            this.mtbZakritiya.Size = new System.Drawing.Size(200, 26);
+            this.mtbZakritiya.TabIndex = 45;
+            this.mtbZakritiya.ValidatingType = typeof(System.DateTime);
             // 
             // ZayavkaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(446, 561);
-            this.Controls.Add(this.maskedTextBox4);
-            this.Controls.Add(this.maskedTextBox3);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.mtbZakritiya);
+            this.Controls.Add(this.mtbOkonchaniya);
+            this.Controls.Add(this.mtbDataNachala);
+            this.Controls.Add(this.mtbDataPodachi);
             this.Controls.Add(this.cbTT);
             this.Controls.Add(this.cbStatus);
             this.Controls.Add(this.cbGroup);
@@ -349,9 +349,9 @@
         private System.Windows.Forms.ComboBox cbGroup;
         private System.Windows.Forms.ComboBox cbStatus;
         private System.Windows.Forms.ComboBox cbTT;
-        public System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        public System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        public System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        public System.Windows.Forms.MaskedTextBox maskedTextBox4;
+        public System.Windows.Forms.MaskedTextBox mtbDataPodachi;
+        public System.Windows.Forms.MaskedTextBox mtbDataNachala;
+        public System.Windows.Forms.MaskedTextBox mtbOkonchaniya;
+        public System.Windows.Forms.MaskedTextBox mtbZakritiya;
     }
 }

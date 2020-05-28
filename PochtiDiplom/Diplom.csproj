@@ -79,6 +79,12 @@
       <DependentUpon>ConectionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DataBaseConnection.cs" />
+    <Compile Include="Vip_no_RabotForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vip_no_RabotForm.Designer.cs">
+      <DependentUpon>Vip_no_RabotForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ZayavkaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     <EmbeddedResource Include="ChangePasswordForm.resx">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConectionForm.resx">
+      <DependentUpon>ConectionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StatusForm.resx">
       <DependentUpon>StatusForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -151,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TipRabotForm.resx">
       <DependentUpon>TipRabotForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vip_no_RabotForm.resx">
+      <DependentUpon>Vip_no_RabotForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ZayavkaForm.resx">
       <DependentUpon>ZayavkaForm.cs</DependentUpon>

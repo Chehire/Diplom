@@ -425,6 +425,8 @@ namespace Compo
                 GroupForm Group = new GroupForm();
                 Group.btnUpdate.Enabled = false;
                 Group.btnDelete.Enabled = false;
+                Group.btnIzmenit.Enabled = false;
+                Group.btnSnyat.Enabled = false;
                 Group.ShowDialog();
             }
 
@@ -450,6 +452,12 @@ namespace Compo
                 TipRabot.btnUpdate.Enabled = false;
                 TipRabot.btnDelete.Enabled = false;
                 TipRabot.ShowDialog();
+            }
+
+            if (this.Text == "Compo | Выполненные раоты")
+            {
+                Vip_no_RabotForm Vip_no_Rabot = new Vip_no_RabotForm();
+                Vip_no_Rabot.ShowDialog();
             }
         }
 
@@ -500,9 +508,10 @@ namespace Compo
             if (this.Text == "Compo | Дежурные группы")
             {
                 GroupForm Group = new GroupForm();
-                Program.ID_Group = (int)dataGridView1.CurrentRow.Cells[0].Value;
+                Program.ID_Group = (int)dataGridView1.CurrentRow.Cells[0].Value; 
                 Group.mtbDate.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
                 Group.btnAdd.Enabled = false;
+                Group.btnNaznachit.Enabled = false;
                 Group.ShowDialog();
             }
 
@@ -565,7 +574,7 @@ namespace Compo
                         dataGridView1.DataSource = database.TableFill($"select [ID_TipRabot] as [ID], [INN_TipRabot] as [ИНН],[Fam_TipRabot] as [Фамилия],[Name_TipRabot]as [Имя], [Otch_TipRabot] as [Отчество], [Adres_TipRabot] as [Адрес],[Fact_Adres] as [Фактический адрес], [Nomer_TipRabot] as [Моб. номер], [e_mail_TipRabot] as [E-mail] from [dbo].[TipRabot] where [Fam_TipRabot]+' '+[Name_TipRabot]+' '+[Otch_TipRabot] like '%{tbSearch.Text}%' ", database.DatabaseSQL()).Tables[0];
                         break;
                     case "Compo | Сотрудники":
-                        dataGridView1.DataSource = database.TableFill($"select [ID],[Фамилия],[Имя],[Отчество],[Серия паспорта],[Номер паспорта],[Дата рождения],[Должность],[Оклад],[Дата приема],[Дата увольнения] from View_Sotr where [Фамилия]+' '+[Имя]+' '+[Отчество] like '%{tbSearch.Text}%'", database.DatabaseSQL()).Tables[0];
+                        dataGridView1.DataSource = database.TableFill($"select [ID],[Фамилия],[Имя],[Отчество],[Серия паспорта],[Номер паспорта],[Дата рождения],[Должность],[Оклад] from View_Sotr where [Фамилия]+' '+[Имя]+' '+[Отчество] like '%{tbSearch.Text}%'", database.DatabaseSQL()).Tables[0];
                         break;
                 }
             }

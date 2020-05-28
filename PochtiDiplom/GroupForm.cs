@@ -28,8 +28,8 @@ namespace Compo
         {
             database.DatabaseSQL().Open();
             {
-                cbGroup.DataSource = database.TableFill("select [Fam_Sotr]+' '+[Name_Sotr]+' '+[Otch_Sotr]+' '+[Date_Birth] as Sotr from [dbo].[Sotr]", database.DatabaseSQL()).Tables[0];
-                cbGroup.DisplayMember = "Sotr";
+                cbSotr.DataSource = database.TableFill("select [Fam_Sotr]+' '+[Name_Sotr]+' '+[Otch_Sotr]+' '+[Date_Birth] as Sotr from [dbo].[Sotr]", database.DatabaseSQL()).Tables[0];
+                cbSotr.DisplayMember = "Sotr";
                 cbNomerGpoupi.DataSource = database.TableFill("select [ID_Group] as OldGroup from [dbo].[Group]", database.DatabaseSQL()).Tables[0];
                 cbNomerGpoupi.DisplayMember = "OldGroup";
             }
@@ -41,7 +41,7 @@ namespace Compo
             {
                 database.DatabaseSQL().Open();
                 {
-                    SqlCommand cmd = new SqlCommand($"select ID_Sotr from [dbo].[Sotr] where [Fam_Sotr]+' '+[Name_Sotr]+' '+[Otch_Sotr]+' '+[Date_Birth] = '{cbGroup.Text}'", database.DatabaseSQL());
+                    SqlCommand cmd = new SqlCommand($"select ID_Sotr from [dbo].[Sotr] where [Fam_Sotr]+' '+[Name_Sotr]+' '+[Otch_Sotr]+' '+[Date_Birth] = '{cbSotr.Text}'", database.DatabaseSQL());
                     Program.ID_Sotr = (int)cmd.ExecuteScalar();
                 }
             }
