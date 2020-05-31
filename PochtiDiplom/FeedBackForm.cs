@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
+using System.Drawing;
 
 namespace Compo
 {
@@ -10,6 +11,8 @@ namespace Compo
         public FeedBackForm()
         {
             InitializeComponent();
+            Icon iconForm = new Icon(Application.StartupPath + "\\img\\compo2.ico");
+            Icon = iconForm;
             openFileDialog1.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
             openFileDialog1.FileName = "";
         }

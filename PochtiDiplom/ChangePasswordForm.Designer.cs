@@ -37,43 +37,48 @@
             // 
             // tbNewPassword
             // 
-            this.tbNewPassword.Location = new System.Drawing.Point(12, 32);
+            this.tbNewPassword.Location = new System.Drawing.Point(8, 21);
+            this.tbNewPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbNewPassword.MaxLength = 16;
             this.tbNewPassword.Name = "tbNewPassword";
-            this.tbNewPassword.Size = new System.Drawing.Size(358, 26);
+            this.tbNewPassword.Size = new System.Drawing.Size(240, 20);
             this.tbNewPassword.TabIndex = 0;
             // 
             // lblNewPassword
             // 
             this.lblNewPassword.AutoSize = true;
-            this.lblNewPassword.Location = new System.Drawing.Point(12, 9);
+            this.lblNewPassword.Location = new System.Drawing.Point(8, 6);
+            this.lblNewPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNewPassword.Name = "lblNewPassword";
-            this.lblNewPassword.Size = new System.Drawing.Size(186, 20);
+            this.lblNewPassword.Size = new System.Drawing.Size(123, 13);
             this.lblNewPassword.TabIndex = 1;
             this.lblNewPassword.Text = "Введите новый пароль";
             // 
             // lblRepNewPassword
             // 
             this.lblRepNewPassword.AutoSize = true;
-            this.lblRepNewPassword.Location = new System.Drawing.Point(12, 61);
+            this.lblRepNewPassword.Location = new System.Drawing.Point(11, 43);
+            this.lblRepNewPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRepNewPassword.Name = "lblRepNewPassword";
-            this.lblRepNewPassword.Size = new System.Drawing.Size(203, 20);
+            this.lblRepNewPassword.Size = new System.Drawing.Size(135, 13);
             this.lblRepNewPassword.TabIndex = 2;
             this.lblRepNewPassword.Text = "Повторите новый пароль";
             // 
             // tbRepNewPassword
             // 
-            this.tbRepNewPassword.Location = new System.Drawing.Point(12, 84);
+            this.tbRepNewPassword.Location = new System.Drawing.Point(9, 58);
+            this.tbRepNewPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbRepNewPassword.MaxLength = 16;
             this.tbRepNewPassword.Name = "tbRepNewPassword";
-            this.tbRepNewPassword.Size = new System.Drawing.Size(358, 26);
+            this.tbRepNewPassword.Size = new System.Drawing.Size(240, 20);
             this.tbRepNewPassword.TabIndex = 3;
             // 
             // btnChangePassword
             // 
-            this.btnChangePassword.Location = new System.Drawing.Point(12, 116);
+            this.btnChangePassword.Location = new System.Drawing.Point(9, 85);
+            this.btnChangePassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.Size = new System.Drawing.Size(358, 49);
+            this.btnChangePassword.Size = new System.Drawing.Size(239, 32);
             this.btnChangePassword.TabIndex = 4;
             this.btnChangePassword.Text = "Сменить пароль";
             this.btnChangePassword.UseVisualStyleBackColor = true;
@@ -81,14 +86,15 @@
             // 
             // ChangePasswordForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 175);
+            this.ClientSize = new System.Drawing.Size(255, 128);
             this.Controls.Add(this.btnChangePassword);
             this.Controls.Add(this.tbRepNewPassword);
             this.Controls.Add(this.lblRepNewPassword);
             this.Controls.Add(this.lblNewPassword);
             this.Controls.Add(this.tbNewPassword);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ChangePasswordForm";
             this.Text = "Сменить парроль";
             this.ResumeLayout(false);

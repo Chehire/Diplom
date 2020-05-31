@@ -48,29 +48,26 @@
             // 
             this.cbDataSource.Enabled = false;
             this.cbDataSource.FormattingEnabled = true;
-            this.cbDataSource.Location = new System.Drawing.Point(18, 38);
-            this.cbDataSource.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbDataSource.Location = new System.Drawing.Point(12, 25);
             this.cbDataSource.Name = "cbDataSource";
-            this.cbDataSource.Size = new System.Drawing.Size(403, 28);
+            this.cbDataSource.Size = new System.Drawing.Size(270, 21);
             this.cbDataSource.TabIndex = 0;
             // 
             // lblServers
             // 
             this.lblServers.AutoSize = true;
-            this.lblServers.Location = new System.Drawing.Point(18, 14);
-            this.lblServers.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblServers.Location = new System.Drawing.Point(12, 9);
             this.lblServers.Name = "lblServers";
-            this.lblServers.Size = new System.Drawing.Size(142, 20);
+            this.lblServers.Size = new System.Drawing.Size(98, 13);
             this.lblServers.TabIndex = 1;
             this.lblServers.Text = "Список серверов:";
             // 
             // lblUsers
             // 
             this.lblUsers.AutoSize = true;
-            this.lblUsers.Location = new System.Drawing.Point(18, 75);
-            this.lblUsers.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsers.Location = new System.Drawing.Point(12, 49);
             this.lblUsers.Name = "lblUsers";
-            this.lblUsers.Size = new System.Drawing.Size(191, 20);
+            this.lblUsers.Size = new System.Drawing.Size(128, 13);
             this.lblUsers.TabIndex = 2;
             this.lblUsers.Text = "Пользователь сервера:";
             // 
@@ -79,57 +76,52 @@
             this.statusConect.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusConect.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsslStatus});
-            this.statusConect.Location = new System.Drawing.Point(0, 321);
+            this.statusConect.Location = new System.Drawing.Point(0, 209);
             this.statusConect.Name = "statusConect";
-            this.statusConect.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
-            this.statusConect.Size = new System.Drawing.Size(438, 22);
+            this.statusConect.Size = new System.Drawing.Size(292, 22);
             this.statusConect.TabIndex = 3;
             this.statusConect.Text = "statusStrip1";
             // 
             // tsslStatus
             // 
             this.tsslStatus.Name = "tsslStatus";
-            this.tsslStatus.Size = new System.Drawing.Size(19, 25);
+            this.tsslStatus.Size = new System.Drawing.Size(12, 17);
             this.tsslStatus.Text = "-";
             this.tsslStatus.Visible = false;
             // 
             // tbUserID
             // 
             this.tbUserID.Enabled = false;
-            this.tbUserID.Location = new System.Drawing.Point(18, 100);
-            this.tbUserID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbUserID.Location = new System.Drawing.Point(12, 65);
             this.tbUserID.Name = "tbUserID";
             this.tbUserID.PasswordChar = '*';
-            this.tbUserID.Size = new System.Drawing.Size(403, 26);
+            this.tbUserID.Size = new System.Drawing.Size(270, 20);
             this.tbUserID.TabIndex = 4;
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(18, 135);
-            this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPassword.Location = new System.Drawing.Point(12, 88);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(184, 20);
+            this.lblPassword.Size = new System.Drawing.Size(122, 13);
             this.lblPassword.TabIndex = 5;
             this.lblPassword.Text = "Пароль пользователя:";
             // 
             // tbPassword
             // 
             this.tbPassword.Enabled = false;
-            this.tbPassword.Location = new System.Drawing.Point(18, 160);
-            this.tbPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbPassword.Location = new System.Drawing.Point(12, 104);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
-            this.tbPassword.Size = new System.Drawing.Size(403, 26);
+            this.tbPassword.Size = new System.Drawing.Size(270, 20);
             this.tbPassword.TabIndex = 6;
             // 
             // lblDataSource
             // 
             this.lblDataSource.AutoSize = true;
-            this.lblDataSource.Location = new System.Drawing.Point(18, 195);
-            this.lblDataSource.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDataSource.Location = new System.Drawing.Point(12, 127);
             this.lblDataSource.Name = "lblDataSource";
-            this.lblDataSource.Size = new System.Drawing.Size(219, 20);
+            this.lblDataSource.Size = new System.Drawing.Size(148, 13);
             this.lblDataSource.TabIndex = 7;
             this.lblDataSource.Text = "Список источников данных:";
             // 
@@ -137,19 +129,17 @@
             // 
             this.cbInitialCatalog.Enabled = false;
             this.cbInitialCatalog.FormattingEnabled = true;
-            this.cbInitialCatalog.Location = new System.Drawing.Point(18, 220);
-            this.cbInitialCatalog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbInitialCatalog.Location = new System.Drawing.Point(12, 143);
             this.cbInitialCatalog.Name = "cbInitialCatalog";
-            this.cbInitialCatalog.Size = new System.Drawing.Size(403, 28);
+            this.cbInitialCatalog.Size = new System.Drawing.Size(270, 21);
             this.cbInitialCatalog.TabIndex = 8;
             // 
             // btStatus
             // 
             this.btStatus.Enabled = false;
-            this.btStatus.Location = new System.Drawing.Point(18, 262);
-            this.btStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btStatus.Location = new System.Drawing.Point(12, 170);
             this.btStatus.Name = "btStatus";
-            this.btStatus.Size = new System.Drawing.Size(112, 35);
+            this.btStatus.Size = new System.Drawing.Size(75, 36);
             this.btStatus.TabIndex = 9;
             this.btStatus.Text = "Проверка";
             this.btStatus.UseVisualStyleBackColor = true;
@@ -158,10 +148,9 @@
             // btConect
             // 
             this.btConect.Enabled = false;
-            this.btConect.Location = new System.Drawing.Point(140, 262);
-            this.btConect.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btConect.Location = new System.Drawing.Point(93, 170);
             this.btConect.Name = "btConect";
-            this.btConect.Size = new System.Drawing.Size(162, 35);
+            this.btConect.Size = new System.Drawing.Size(108, 36);
             this.btConect.TabIndex = 10;
             this.btConect.Text = "Подключить";
             this.btConect.UseVisualStyleBackColor = true;
@@ -169,10 +158,9 @@
             // 
             // btCancel
             // 
-            this.btCancel.Location = new System.Drawing.Point(310, 262);
-            this.btCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btCancel.Location = new System.Drawing.Point(207, 170);
             this.btCancel.Name = "btCancel";
-            this.btCancel.Size = new System.Drawing.Size(112, 35);
+            this.btCancel.Size = new System.Drawing.Size(75, 36);
             this.btCancel.TabIndex = 11;
             this.btCancel.Text = "Отмена";
             this.btCancel.UseVisualStyleBackColor = true;
@@ -180,9 +168,9 @@
             // 
             // ConectionForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(438, 343);
+            this.ClientSize = new System.Drawing.Size(292, 231);
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btConect);
             this.Controls.Add(this.btStatus);
@@ -196,7 +184,6 @@
             this.Controls.Add(this.lblServers);
             this.Controls.Add(this.cbDataSource);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ConectionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Настройка подлючения";

@@ -18,6 +18,8 @@ namespace Compo
         public ChangePasswordForm()
         {
             InitializeComponent();
+            Icon iconForm = new Icon(Application.StartupPath + "\\img\\compo2.ico");
+            Icon = iconForm;
             lblNewPassword.Text = "Введите новый пароль";
             lblRepNewPassword.Text = "Повторите новый пароль";
             btnChangePassword.Text = "Сменить пароль";

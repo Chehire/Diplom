@@ -20,8 +20,8 @@ namespace Compo
             this.StartPosition = FormStartPosition.CenterScreen; //Расположение окна по центру монитора
             this.FormBorderStyle = FormBorderStyle.FixedToolWindow;//Добавление иконки приложения
             ShowSotr();
-            //Icon iconForm = new Icon(Application.StartupPath + "\\img\\Compo.ico");
-            //Icon = iconForm;
+            Icon iconForm = new Icon(Application.StartupPath + "\\img\\compo2.ico");
+            Icon = iconForm;
         }
 
         private void ShowSotr() //Вывод должности в comboBox

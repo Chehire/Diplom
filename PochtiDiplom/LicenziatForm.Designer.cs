@@ -38,28 +38,25 @@
             // lblTipRabot
             // 
             this.lblTipRabot.AutoSize = true;
-            this.lblTipRabot.Location = new System.Drawing.Point(13, 9);
-            this.lblTipRabot.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTipRabot.Location = new System.Drawing.Point(9, 6);
             this.lblTipRabot.Name = "lblTipRabot";
-            this.lblTipRabot.Size = new System.Drawing.Size(85, 20);
+            this.lblTipRabot.Size = new System.Drawing.Size(58, 13);
             this.lblTipRabot.TabIndex = 0;
             this.lblTipRabot.Text = "Тип работ";
             // 
             // tbTipRabot
             // 
-            this.tbTipRabot.Location = new System.Drawing.Point(13, 34);
-            this.tbTipRabot.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbTipRabot.Location = new System.Drawing.Point(9, 22);
             this.tbTipRabot.MaxLength = 25;
             this.tbTipRabot.Name = "tbTipRabot";
-            this.tbTipRabot.Size = new System.Drawing.Size(316, 26);
+            this.tbTipRabot.Size = new System.Drawing.Size(212, 20);
             this.tbTipRabot.TabIndex = 2;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(13, 70);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAdd.Location = new System.Drawing.Point(9, 45);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(100, 35);
+            this.btnAdd.Size = new System.Drawing.Size(67, 25);
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "Добавить";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -67,10 +64,9 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(121, 70);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnUpdate.Location = new System.Drawing.Point(81, 45);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(100, 35);
+            this.btnUpdate.Size = new System.Drawing.Size(67, 25);
             this.btnUpdate.TabIndex = 5;
             this.btnUpdate.Text = "Изменить";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -78,10 +74,9 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(229, 70);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDelete.Location = new System.Drawing.Point(153, 45);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(100, 35);
+            this.btnDelete.Size = new System.Drawing.Size(67, 25);
             this.btnDelete.TabIndex = 6;
             this.btnDelete.Text = "Удалить";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -89,15 +84,14 @@
             // 
             // TipRabotForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(344, 126);
+            this.ClientSize = new System.Drawing.Size(229, 100);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.tbTipRabot);
             this.Controls.Add(this.lblTipRabot);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "TipRabotForm";
             this.Text = "Тип работ";
             this.ResumeLayout(false);

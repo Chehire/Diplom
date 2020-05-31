@@ -42,65 +42,60 @@
             // lblTT
             // 
             this.lblTT.AutoSize = true;
-            this.lblTT.Location = new System.Drawing.Point(13, 27);
-            this.lblTT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTT.Location = new System.Drawing.Point(9, 9);
             this.lblTT.Name = "lblTT";
-            this.lblTT.Size = new System.Drawing.Size(205, 20);
+            this.lblTT.Size = new System.Drawing.Size(137, 13);
             this.lblTT.TabIndex = 9;
             this.lblTT.Text = "Название торговой точки";
             // 
             // tbNameTT
             // 
-            this.tbNameTT.Location = new System.Drawing.Point(13, 52);
-            this.tbNameTT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbNameTT.Location = new System.Drawing.Point(9, 25);
             this.tbNameTT.MaxLength = 32;
             this.tbNameTT.Name = "tbNameTT";
-            this.tbNameTT.Size = new System.Drawing.Size(334, 26);
+            this.tbNameTT.Size = new System.Drawing.Size(224, 20);
             this.tbNameTT.TabIndex = 8;
             // 
             // tbPrice
             // 
-            this.tbPrice.Location = new System.Drawing.Point(13, 108);
-            this.tbPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbPrice.Location = new System.Drawing.Point(9, 64);
             this.tbPrice.MaxLength = 3;
             this.tbPrice.Name = "tbPrice";
-            this.tbPrice.Size = new System.Drawing.Size(334, 26);
+            this.tbPrice.Size = new System.Drawing.Size(224, 20);
             this.tbPrice.TabIndex = 14;
             // 
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(13, 83);
-            this.lblPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPrice.Location = new System.Drawing.Point(9, 48);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(268, 20);
+            this.lblPrice.Size = new System.Drawing.Size(179, 13);
             this.lblPrice.TabIndex = 15;
             this.lblPrice.Text = "Количество установленных полок";
             // 
             // tbAdres
             // 
-            this.tbAdres.Location = new System.Drawing.Point(13, 164);
-            this.tbAdres.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbAdres.Location = new System.Drawing.Point(9, 103);
             this.tbAdres.MaxLength = 255;
             this.tbAdres.Name = "tbAdres";
-            this.tbAdres.Size = new System.Drawing.Size(334, 26);
+            this.tbAdres.Size = new System.Drawing.Size(224, 20);
             this.tbAdres.TabIndex = 16;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 139);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(9, 87);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 20);
+            this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 17;
             this.label1.Text = "Адрес";
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(239, 198);
+            this.btnDelete.Location = new System.Drawing.Point(159, 129);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(109, 29);
+            this.btnDelete.Size = new System.Drawing.Size(73, 29);
             this.btnDelete.TabIndex = 20;
             this.btnDelete.Text = " Удалить";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -108,9 +103,10 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(129, 198);
+            this.btnUpdate.Location = new System.Drawing.Point(86, 129);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(100, 29);
+            this.btnUpdate.Size = new System.Drawing.Size(67, 29);
             this.btnUpdate.TabIndex = 19;
             this.btnUpdate.Text = "Изменить";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -118,9 +114,10 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(12, 198);
+            this.btnAdd.Location = new System.Drawing.Point(8, 129);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(100, 29);
+            this.btnAdd.Size = new System.Drawing.Size(67, 29);
             this.btnAdd.TabIndex = 18;
             this.btnAdd.Text = "Записать";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -128,9 +125,9 @@
             // 
             // TTForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(360, 243);
+            this.ClientSize = new System.Drawing.Size(240, 169);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
@@ -140,7 +137,6 @@
             this.Controls.Add(this.tbPrice);
             this.Controls.Add(this.lblTT);
             this.Controls.Add(this.tbNameTT);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "TTForm";
             this.Text = "Торговые точки";
             this.ResumeLayout(false);

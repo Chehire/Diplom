@@ -54,7 +54,6 @@
             this.lblFam = new System.Windows.Forms.Label();
             this.tcSotr = new System.Windows.Forms.TabControl();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnPrint = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tcSotr.SuspendLayout();
@@ -62,10 +61,9 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(283, 418);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDelete.Location = new System.Drawing.Point(187, 250);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(102, 30);
+            this.btnDelete.Size = new System.Drawing.Size(68, 28);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Удалить";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -73,10 +71,9 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(4, 418);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAdd.Location = new System.Drawing.Point(3, 250);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(102, 30);
+            this.btnAdd.Size = new System.Drawing.Size(68, 28);
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "Добавить";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -92,10 +89,11 @@
             this.tabPage2.Controls.Add(this.lblLogin);
             this.tabPage2.Controls.Add(this.lblRepPas);
             this.tabPage2.Controls.Add(this.lblPassword);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(377, 327);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Size = new System.Drawing.Size(249, 208);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "О сотруднике";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -103,78 +101,70 @@
             // cbDolj
             // 
             this.cbDolj.FormattingEnabled = true;
-            this.cbDolj.Location = new System.Drawing.Point(4, 196);
-            this.cbDolj.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbDolj.Location = new System.Drawing.Point(3, 127);
             this.cbDolj.Name = "cbDolj";
-            this.cbDolj.Size = new System.Drawing.Size(332, 28);
+            this.cbDolj.Size = new System.Drawing.Size(223, 21);
             this.cbDolj.TabIndex = 21;
             this.cbDolj.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
             // lblDolj
             // 
             this.lblDolj.AutoSize = true;
-            this.lblDolj.Location = new System.Drawing.Point(7, 171);
-            this.lblDolj.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDolj.Location = new System.Drawing.Point(5, 111);
             this.lblDolj.Name = "lblDolj";
-            this.lblDolj.Size = new System.Drawing.Size(95, 20);
+            this.lblDolj.Size = new System.Drawing.Size(65, 13);
             this.lblDolj.TabIndex = 26;
             this.lblDolj.Text = "Должность";
             // 
             // tbLogin
             // 
-            this.tbLogin.Location = new System.Drawing.Point(4, 28);
-            this.tbLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbLogin.Location = new System.Drawing.Point(3, 18);
             this.tbLogin.MaxLength = 16;
             this.tbLogin.Name = "tbLogin";
-            this.tbLogin.Size = new System.Drawing.Size(331, 26);
+            this.tbLogin.Size = new System.Drawing.Size(222, 20);
             this.tbLogin.TabIndex = 18;
             this.tbLogin.Tag = "";
             // 
             // tbRepPas
             // 
-            this.tbRepPas.Location = new System.Drawing.Point(4, 140);
-            this.tbRepPas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbRepPas.Location = new System.Drawing.Point(3, 91);
             this.tbRepPas.MaxLength = 16;
             this.tbRepPas.Name = "tbRepPas";
-            this.tbRepPas.Size = new System.Drawing.Size(331, 26);
+            this.tbRepPas.Size = new System.Drawing.Size(222, 20);
             this.tbRepPas.TabIndex = 20;
             // 
             // tbPas
             // 
-            this.tbPas.Location = new System.Drawing.Point(4, 84);
-            this.tbPas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbPas.Location = new System.Drawing.Point(3, 55);
             this.tbPas.MaxLength = 16;
             this.tbPas.Name = "tbPas";
-            this.tbPas.Size = new System.Drawing.Size(331, 26);
+            this.tbPas.Size = new System.Drawing.Size(222, 20);
             this.tbPas.TabIndex = 19;
             // 
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
-            this.lblLogin.Location = new System.Drawing.Point(7, 3);
-            this.lblLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLogin.Location = new System.Drawing.Point(5, 2);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(55, 20);
+            this.lblLogin.Size = new System.Drawing.Size(38, 13);
             this.lblLogin.TabIndex = 23;
             this.lblLogin.Text = "Логин";
             // 
             // lblRepPas
             // 
             this.lblRepPas.AutoSize = true;
-            this.lblRepPas.Location = new System.Drawing.Point(7, 115);
-            this.lblRepPas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRepPas.Location = new System.Drawing.Point(5, 75);
             this.lblRepPas.Name = "lblRepPas";
-            this.lblRepPas.Size = new System.Drawing.Size(152, 20);
+            this.lblRepPas.Size = new System.Drawing.Size(100, 13);
             this.lblRepPas.TabIndex = 25;
             this.lblRepPas.Text = "Повторите пароль";
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(7, 59);
-            this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPassword.Location = new System.Drawing.Point(5, 38);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(67, 20);
+            this.lblPassword.Size = new System.Drawing.Size(45, 13);
             this.lblPassword.TabIndex = 24;
             this.lblPassword.Text = "Пароль";
             // 
@@ -193,10 +183,11 @@
             this.tabPage1.Controls.Add(this.lblName);
             this.tabPage1.Controls.Add(this.tbFam);
             this.tabPage1.Controls.Add(this.lblFam);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(377, 327);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Size = new System.Drawing.Size(249, 208);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Персональные данные";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -204,111 +195,113 @@
             // lblDateBirth
             // 
             this.lblDateBirth.AutoSize = true;
-            this.lblDateBirth.Location = new System.Drawing.Point(7, 223);
+            this.lblDateBirth.Location = new System.Drawing.Point(5, 148);
+            this.lblDateBirth.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDateBirth.Name = "lblDateBirth";
-            this.lblDateBirth.Size = new System.Drawing.Size(128, 20);
+            this.lblDateBirth.Size = new System.Drawing.Size(86, 13);
             this.lblDateBirth.TabIndex = 34;
             this.lblDateBirth.Text = "Дата рождения";
             // 
             // mtbDateBirth
             // 
-            this.mtbDateBirth.Location = new System.Drawing.Point(11, 246);
+            this.mtbDateBirth.Location = new System.Drawing.Point(2, 163);
+            this.mtbDateBirth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.mtbDateBirth.Mask = "00/00/0000";
             this.mtbDateBirth.Name = "mtbDateBirth";
-            this.mtbDateBirth.Size = new System.Drawing.Size(173, 26);
+            this.mtbDateBirth.Size = new System.Drawing.Size(122, 20);
             this.mtbDateBirth.TabIndex = 33;
             this.mtbDateBirth.ValidatingType = typeof(System.DateTime);
             // 
             // mtbNum
             // 
-            this.mtbNum.Location = new System.Drawing.Point(193, 194);
+            this.mtbNum.Location = new System.Drawing.Point(129, 126);
+            this.mtbNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.mtbNum.Mask = "999999";
             this.mtbNum.Name = "mtbNum";
-            this.mtbNum.Size = new System.Drawing.Size(178, 26);
+            this.mtbNum.Size = new System.Drawing.Size(120, 20);
             this.mtbNum.TabIndex = 32;
             // 
             // mtbSer
             // 
-            this.mtbSer.Location = new System.Drawing.Point(6, 194);
+            this.mtbSer.Location = new System.Drawing.Point(4, 126);
+            this.mtbSer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.mtbSer.Mask = "9999";
             this.mtbSer.Name = "mtbSer";
-            this.mtbSer.Size = new System.Drawing.Size(178, 26);
+            this.mtbSer.Size = new System.Drawing.Size(120, 20);
             this.mtbSer.TabIndex = 31;
             // 
             // lblNum
             // 
             this.lblNum.AutoSize = true;
-            this.lblNum.Location = new System.Drawing.Point(210, 171);
+            this.lblNum.Location = new System.Drawing.Point(140, 111);
+            this.lblNum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNum.Name = "lblNum";
-            this.lblNum.Size = new System.Drawing.Size(134, 20);
+            this.lblNum.Size = new System.Drawing.Size(91, 13);
             this.lblNum.TabIndex = 30;
             this.lblNum.Text = "Номер паспорта";
             // 
             // lblSer
             // 
             this.lblSer.AutoSize = true;
-            this.lblSer.Location = new System.Drawing.Point(7, 171);
+            this.lblSer.Location = new System.Drawing.Point(5, 111);
+            this.lblSer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSer.Name = "lblSer";
-            this.lblSer.Size = new System.Drawing.Size(131, 20);
+            this.lblSer.Size = new System.Drawing.Size(88, 13);
             this.lblSer.TabIndex = 29;
             this.lblSer.Text = "Серия паспорта";
             // 
             // tbOtch
             // 
-            this.tbOtch.Location = new System.Drawing.Point(7, 140);
-            this.tbOtch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbOtch.Location = new System.Drawing.Point(5, 91);
             this.tbOtch.MaxLength = 25;
             this.tbOtch.Name = "tbOtch";
-            this.tbOtch.Size = new System.Drawing.Size(363, 26);
+            this.tbOtch.Size = new System.Drawing.Size(243, 20);
             this.tbOtch.TabIndex = 28;
             this.tbOtch.Tag = "";
             // 
             // lblOtch
             // 
             this.lblOtch.AutoSize = true;
-            this.lblOtch.Location = new System.Drawing.Point(7, 115);
-            this.lblOtch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOtch.Location = new System.Drawing.Point(5, 75);
             this.lblOtch.Name = "lblOtch";
-            this.lblOtch.Size = new System.Drawing.Size(83, 20);
+            this.lblOtch.Size = new System.Drawing.Size(54, 13);
             this.lblOtch.TabIndex = 27;
             this.lblOtch.Text = "Отчество";
             // 
             // tbName
             // 
-            this.tbName.Location = new System.Drawing.Point(7, 84);
-            this.tbName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbName.Location = new System.Drawing.Point(5, 55);
             this.tbName.MaxLength = 20;
             this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(363, 26);
+            this.tbName.Size = new System.Drawing.Size(243, 20);
             this.tbName.TabIndex = 26;
             this.tbName.Tag = "";
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(7, 59);
-            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblName.Location = new System.Drawing.Point(5, 38);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(40, 20);
+            this.lblName.Size = new System.Drawing.Size(29, 13);
             this.lblName.TabIndex = 25;
             this.lblName.Text = "Имя";
             // 
             // tbFam
             // 
-            this.tbFam.Location = new System.Drawing.Point(7, 28);
-            this.tbFam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbFam.Location = new System.Drawing.Point(5, 18);
             this.tbFam.MaxLength = 25;
             this.tbFam.Name = "tbFam";
-            this.tbFam.Size = new System.Drawing.Size(363, 26);
+            this.tbFam.Size = new System.Drawing.Size(243, 20);
             this.tbFam.TabIndex = 24;
             this.tbFam.Tag = "";
             // 
             // lblFam
             // 
             this.lblFam.AutoSize = true;
-            this.lblFam.Location = new System.Drawing.Point(7, 3);
+            this.lblFam.Location = new System.Drawing.Point(5, 2);
+            this.lblFam.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFam.Name = "lblFam";
-            this.lblFam.Size = new System.Drawing.Size(81, 20);
+            this.lblFam.Size = new System.Drawing.Size(56, 13);
             this.lblFam.TabIndex = 0;
             this.lblFam.Text = "Фамилия";
             // 
@@ -316,44 +309,33 @@
             // 
             this.tcSotr.Controls.Add(this.tabPage1);
             this.tcSotr.Controls.Add(this.tabPage2);
-            this.tcSotr.Location = new System.Drawing.Point(4, 50);
+            this.tcSotr.Location = new System.Drawing.Point(3, 11);
+            this.tcSotr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tcSotr.Name = "tcSotr";
             this.tcSotr.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tcSotr.SelectedIndex = 0;
-            this.tcSotr.Size = new System.Drawing.Size(385, 360);
+            this.tcSotr.Size = new System.Drawing.Size(257, 234);
             this.tcSotr.TabIndex = 1;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(135, 418);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnUpdate.Location = new System.Drawing.Point(97, 250);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(102, 30);
+            this.btnUpdate.Size = new System.Drawing.Size(68, 28);
             this.btnUpdate.TabIndex = 6;
             this.btnUpdate.Text = "Изменить";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // btnPrint
-            // 
-            this.btnPrint.Location = new System.Drawing.Point(12, 12);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(102, 30);
-            this.btnPrint.TabIndex = 33;
-            this.btnPrint.Text = "Печать";
-            this.btnPrint.UseVisualStyleBackColor = true;
-            // 
             // SigUpForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 462);
-            this.Controls.Add(this.btnPrint);
+            this.ClientSize = new System.Drawing.Size(262, 283);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.tcSotr);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SigUpForm";
             this.Text = "Регистрация";
             this.tabPage2.ResumeLayout(false);
@@ -390,7 +372,6 @@
         public System.Windows.Forms.TextBox tbFam;
         public System.Windows.Forms.Button btnUpdate;
         public System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Label lblDateBirth;
         public System.Windows.Forms.MaskedTextBox mtbDateBirth;
     }

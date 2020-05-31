@@ -14,6 +14,8 @@ namespace Compo
         public AboutBox()
         {
             InitializeComponent();
+            Icon iconForm = new Icon(Application.StartupPath + "\\img\\compo2.ico");
+            Icon = iconForm;
             this.Text = String.Format("О программе {0}", AssemblyTitle);
             this.labelProductName.Text = AssemblyProduct;
             this.labelVersion.Text = String.Format("Версия {0}", AssemblyVersion);

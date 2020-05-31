@@ -45,9 +45,9 @@
             label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             label1.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Bold);
             label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            label1.Location = new System.Drawing.Point(73, 389);
+            label1.Location = new System.Drawing.Point(74, 389);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(359, 65);
+            label1.Size = new System.Drawing.Size(358, 65);
             label1.TabIndex = 1;
             label1.Text = "Идет настройка подключения подождите пожалуйста";
             label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -61,10 +61,10 @@
             // progressBar1
             // 
             this.progressBar1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.progressBar1.Location = new System.Drawing.Point(12, 456);
+            this.progressBar1.Location = new System.Drawing.Point(12, 455);
             this.progressBar1.Maximum = 17;
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(473, 35);
+            this.progressBar1.Size = new System.Drawing.Size(472, 35);
             this.progressBar1.TabIndex = 0;
             // 
             // Zastavka
@@ -72,9 +72,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(503, 500);
+            this.ClientSize = new System.Drawing.Size(502, 500);
             this.Controls.Add(label1);
             this.Controls.Add(this.progressBar1);
             this.DoubleBuffered = true;

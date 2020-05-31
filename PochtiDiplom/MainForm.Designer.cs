@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ФайлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,6 +46,7 @@
             this.StatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ZayavkaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TipRabotoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.VipolnennieRabotiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ОбновитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.проверкаНеобходимогоПОToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,19 +56,15 @@
             this.здравствуйтеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сменитьПарольToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.staticToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.AddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
-            this.chart_statistic = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.VipolnennieRabotiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart_statistic)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -83,12 +77,11 @@
             this.настройкиToolStripMenuItem,
             this.видToolStripMenuItem,
             this.здравствуйтеToolStripMenuItem,
-            this.оПрограммеToolStripMenuItem,
-            this.staticToolStripMenuItem});
+            this.оПрограммеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1626, 35);
+            this.menuStrip1.Size = new System.Drawing.Size(1200, 35);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -217,6 +210,13 @@
             this.TipRabotoolStripMenuItem.Text = "Список типов работ";
             this.TipRabotoolStripMenuItem.Click += new System.EventHandler(this.TipRabotoolStripMenuItem_Click);
             // 
+            // VipolnennieRabotiToolStripMenuItem
+            // 
+            this.VipolnennieRabotiToolStripMenuItem.Name = "VipolnennieRabotiToolStripMenuItem";
+            this.VipolnennieRabotiToolStripMenuItem.Size = new System.Drawing.Size(326, 30);
+            this.VipolnennieRabotiToolStripMenuItem.Text = "Список выполненных работ";
+            this.VipolnennieRabotiToolStripMenuItem.Click += new System.EventHandler(this.VipolnennieRabotiToolStripMenuItem_Click);
+            // 
             // ОбновитьToolStripMenuItem
             // 
             this.ОбновитьToolStripMenuItem.Name = "ОбновитьToolStripMenuItem";
@@ -284,13 +284,6 @@
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.aboutProgramToolStripMenuItem_Click);
             // 
-            // staticToolStripMenuItem
-            // 
-            this.staticToolStripMenuItem.Name = "staticToolStripMenuItem";
-            this.staticToolStripMenuItem.Size = new System.Drawing.Size(111, 29);
-            this.staticToolStripMenuItem.Text = "Статистика";
-            this.staticToolStripMenuItem.Click += new System.EventHandler(this.staticToolStripMenuItem_Click);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -344,35 +337,11 @@
             this.lblSearch.TabIndex = 3;
             this.lblSearch.Text = "Поиск";
             // 
-            // chart_statistic
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart_statistic.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart_statistic.Legends.Add(legend1);
-            this.chart_statistic.Location = new System.Drawing.Point(1193, 108);
-            this.chart_statistic.Name = "chart_statistic";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart_statistic.Series.Add(series1);
-            this.chart_statistic.Size = new System.Drawing.Size(421, 403);
-            this.chart_statistic.TabIndex = 4;
-            this.chart_statistic.Text = "chart1";
-            // 
-            // VipolnennieRabotiToolStripMenuItem
-            // 
-            this.VipolnennieRabotiToolStripMenuItem.Name = "VipolnennieRabotiToolStripMenuItem";
-            this.VipolnennieRabotiToolStripMenuItem.Size = new System.Drawing.Size(326, 30);
-            this.VipolnennieRabotiToolStripMenuItem.Text = "Список выполненных работ";
-            this.VipolnennieRabotiToolStripMenuItem.Click += new System.EventHandler(this.VipolnennieRabotiToolStripMenuItem_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1626, 510);
-            this.Controls.Add(this.chart_statistic);
+            this.ClientSize = new System.Drawing.Size(1200, 521);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.tbSearch);
             this.Controls.Add(this.dataGridView1);
@@ -387,7 +356,6 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart_statistic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -427,8 +395,6 @@
         private System.Windows.Forms.ToolStripMenuItem проверкаНеобходимогоПОToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem проверкаНаличияMSExcelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem проверкаНаличияMSOfficeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem staticToolStripMenuItem;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart_statistic;
         private System.Windows.Forms.ToolStripMenuItem VipolnennieRabotiToolStripMenuItem;
     }
 }

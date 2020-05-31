@@ -38,25 +38,28 @@
             // Status
             // 
             this.Status.AutoSize = true;
-            this.Status.Location = new System.Drawing.Point(12, 9);
+            this.Status.Location = new System.Drawing.Point(8, 6);
+            this.Status.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Status.Name = "Status";
-            this.Status.Size = new System.Drawing.Size(62, 20);
+            this.Status.Size = new System.Drawing.Size(41, 13);
             this.Status.TabIndex = 2;
             this.Status.Text = "Статус";
             // 
             // tbStatus
             // 
-            this.tbStatus.Location = new System.Drawing.Point(12, 32);
+            this.tbStatus.Location = new System.Drawing.Point(8, 21);
+            this.tbStatus.Margin = new System.Windows.Forms.Padding(2);
             this.tbStatus.MaxLength = 16;
             this.tbStatus.Name = "tbStatus";
-            this.tbStatus.Size = new System.Drawing.Size(325, 26);
+            this.tbStatus.Size = new System.Drawing.Size(218, 20);
             this.tbStatus.TabIndex = 11;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(122, 64);
+            this.btnUpdate.Location = new System.Drawing.Point(81, 42);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(100, 29);
+            this.btnUpdate.Size = new System.Drawing.Size(67, 28);
             this.btnUpdate.TabIndex = 16;
             this.btnUpdate.Text = "Изменить";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -64,9 +67,10 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(228, 64);
+            this.btnDelete.Location = new System.Drawing.Point(152, 42);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(109, 29);
+            this.btnDelete.Size = new System.Drawing.Size(73, 28);
             this.btnDelete.TabIndex = 17;
             this.btnDelete.Text = " Удалить";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -74,9 +78,10 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(16, 64);
+            this.btnAdd.Location = new System.Drawing.Point(8, 42);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(100, 29);
+            this.btnAdd.Size = new System.Drawing.Size(67, 28);
             this.btnAdd.TabIndex = 15;
             this.btnAdd.Text = "Записать";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -84,14 +89,15 @@
             // 
             // StatusForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(349, 106);
+            this.ClientSize = new System.Drawing.Size(233, 81);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.tbStatus);
             this.Controls.Add(this.Status);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StatusForm";
             this.Text = " Статус";
             this.ResumeLayout(false);

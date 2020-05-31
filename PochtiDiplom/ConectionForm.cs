@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -13,6 +14,8 @@ namespace Compo
         {
             this.TopMost = true;
             InitializeComponent();
+            Icon iconForm = new Icon(Application.StartupPath + "\\img\\compo2.ico");
+            Icon = iconForm;
         }
 
         private void ConectionForm_Load(object sender, EventArgs e)

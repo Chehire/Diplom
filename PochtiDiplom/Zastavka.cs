@@ -19,6 +19,8 @@ namespace Compo
         {
             this.TopMost = true; //Вызов окна поверх других
             InitializeComponent();
+            Icon iconForm = new Icon(Application.StartupPath + "\\img\\compo2.ico");
+            Icon = iconForm;
             this.StartPosition = FormStartPosition.CenterScreen; //Расположение окна по центру монитора
 
         }

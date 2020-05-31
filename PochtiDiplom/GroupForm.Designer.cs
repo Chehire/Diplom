@@ -51,27 +51,28 @@
             // lblDate
             // 
             this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(15, 14);
-            this.lblDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDate.Location = new System.Drawing.Point(10, 9);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(48, 20);
+            this.lblDate.Size = new System.Drawing.Size(33, 13);
             this.lblDate.TabIndex = 35;
             this.lblDate.Text = "Дата";
             // 
             // lblSotr
             // 
             this.lblSotr.AutoSize = true;
-            this.lblSotr.Location = new System.Drawing.Point(14, 77);
+            this.lblSotr.Location = new System.Drawing.Point(9, 50);
+            this.lblSotr.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSotr.Name = "lblSotr";
-            this.lblSotr.Size = new System.Drawing.Size(91, 20);
+            this.lblSotr.Size = new System.Drawing.Size(60, 13);
             this.lblSotr.TabIndex = 33;
             this.lblSotr.Text = "Сотрудник";
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(15, 139);
+            this.btnAdd.Location = new System.Drawing.Point(10, 90);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(95, 33);
+            this.btnAdd.Size = new System.Drawing.Size(63, 21);
             this.btnAdd.TabIndex = 41;
             this.btnAdd.Text = "Добавить";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -79,9 +80,10 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(140, 139);
+            this.btnUpdate.Location = new System.Drawing.Point(93, 90);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(97, 33);
+            this.btnUpdate.Size = new System.Drawing.Size(65, 21);
             this.btnUpdate.TabIndex = 42;
             this.btnUpdate.Text = "Изменить";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -89,9 +91,10 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(263, 139);
+            this.btnDelete.Location = new System.Drawing.Point(175, 90);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(89, 33);
+            this.btnDelete.Size = new System.Drawing.Size(59, 21);
             this.btnDelete.TabIndex = 43;
             this.btnDelete.Text = "Удалить";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -100,27 +103,30 @@
             // cbSotr
             // 
             this.cbSotr.FormattingEnabled = true;
-            this.cbSotr.Location = new System.Drawing.Point(13, 101);
+            this.cbSotr.Location = new System.Drawing.Point(9, 66);
+            this.cbSotr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbSotr.Name = "cbSotr";
-            this.cbSotr.Size = new System.Drawing.Size(338, 28);
+            this.cbSotr.Size = new System.Drawing.Size(227, 21);
             this.cbSotr.TabIndex = 44;
             this.cbSotr.SelectedIndexChanged += new System.EventHandler(this.CbGroup_SelectedIndexChanged);
             // 
             // lblGroup
             // 
             this.lblGroup.AutoSize = true;
-            this.lblGroup.Location = new System.Drawing.Point(14, 7);
+            this.lblGroup.Location = new System.Drawing.Point(9, 5);
+            this.lblGroup.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGroup.Name = "lblGroup";
-            this.lblGroup.Size = new System.Drawing.Size(115, 20);
+            this.lblGroup.Size = new System.Drawing.Size(80, 13);
             this.lblGroup.TabIndex = 45;
             this.lblGroup.Text = "Номер группы";
             // 
             // mtbDate
             // 
-            this.mtbDate.Location = new System.Drawing.Point(15, 37);
+            this.mtbDate.Location = new System.Drawing.Point(10, 24);
+            this.mtbDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.mtbDate.Mask = "00/00/0000";
             this.mtbDate.Name = "mtbDate";
-            this.mtbDate.Size = new System.Drawing.Size(337, 26);
+            this.mtbDate.Size = new System.Drawing.Size(226, 20);
             this.mtbDate.TabIndex = 47;
             this.mtbDate.ValidatingType = typeof(System.DateTime);
             // 
@@ -128,10 +134,11 @@
             // 
             this.tcGroup.Controls.Add(this.tpGroupSotr);
             this.tcGroup.Controls.Add(this.tbCreateGroup);
-            this.tcGroup.Location = new System.Drawing.Point(3, 9);
+            this.tcGroup.Location = new System.Drawing.Point(2, 6);
+            this.tcGroup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tcGroup.Name = "tcGroup";
             this.tcGroup.SelectedIndex = 0;
-            this.tcGroup.Size = new System.Drawing.Size(379, 211);
+            this.tcGroup.Size = new System.Drawing.Size(253, 145);
             this.tcGroup.TabIndex = 48;
             // 
             // tpGroupSotr
@@ -144,18 +151,20 @@
             this.tpGroupSotr.Controls.Add(this.lblGroup);
             this.tpGroupSotr.Controls.Add(this.lblSotr);
             this.tpGroupSotr.Controls.Add(this.cbSotr);
-            this.tpGroupSotr.Location = new System.Drawing.Point(4, 29);
+            this.tpGroupSotr.Location = new System.Drawing.Point(4, 22);
+            this.tpGroupSotr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tpGroupSotr.Name = "tpGroupSotr";
-            this.tpGroupSotr.Padding = new System.Windows.Forms.Padding(3);
-            this.tpGroupSotr.Size = new System.Drawing.Size(371, 178);
+            this.tpGroupSotr.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpGroupSotr.Size = new System.Drawing.Size(245, 119);
             this.tpGroupSotr.TabIndex = 0;
             this.tpGroupSotr.Text = "Назначение сотрудника";
             // 
             // btnSnyat
             // 
-            this.btnSnyat.Location = new System.Drawing.Point(244, 135);
+            this.btnSnyat.Location = new System.Drawing.Point(163, 88);
+            this.btnSnyat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSnyat.Name = "btnSnyat";
-            this.btnSnyat.Size = new System.Drawing.Size(107, 27);
+            this.btnSnyat.Size = new System.Drawing.Size(71, 27);
             this.btnSnyat.TabIndex = 49;
             this.btnSnyat.Text = "Удалить";
             this.btnSnyat.UseVisualStyleBackColor = true;
@@ -163,9 +172,10 @@
             // 
             // btnIzmenit
             // 
-            this.btnIzmenit.Location = new System.Drawing.Point(131, 135);
+            this.btnIzmenit.Location = new System.Drawing.Point(87, 88);
+            this.btnIzmenit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnIzmenit.Name = "btnIzmenit";
-            this.btnIzmenit.Size = new System.Drawing.Size(107, 27);
+            this.btnIzmenit.Size = new System.Drawing.Size(71, 27);
             this.btnIzmenit.TabIndex = 48;
             this.btnIzmenit.Text = "Изменить";
             this.btnIzmenit.UseVisualStyleBackColor = true;
@@ -173,9 +183,10 @@
             // 
             // btnNaznachit
             // 
-            this.btnNaznachit.Location = new System.Drawing.Point(13, 135);
+            this.btnNaznachit.Location = new System.Drawing.Point(9, 88);
+            this.btnNaznachit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNaznachit.Name = "btnNaznachit";
-            this.btnNaznachit.Size = new System.Drawing.Size(112, 27);
+            this.btnNaznachit.Size = new System.Drawing.Size(75, 27);
             this.btnNaznachit.TabIndex = 47;
             this.btnNaznachit.Text = "Назначить";
             this.btnNaznachit.UseVisualStyleBackColor = true;
@@ -184,9 +195,10 @@
             // cbNomerGpoupi
             // 
             this.cbNomerGpoupi.FormattingEnabled = true;
-            this.cbNomerGpoupi.Location = new System.Drawing.Point(13, 30);
+            this.cbNomerGpoupi.Location = new System.Drawing.Point(9, 19);
+            this.cbNomerGpoupi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbNomerGpoupi.Name = "cbNomerGpoupi";
-            this.cbNomerGpoupi.Size = new System.Drawing.Size(338, 28);
+            this.cbNomerGpoupi.Size = new System.Drawing.Size(227, 21);
             this.cbNomerGpoupi.TabIndex = 46;
             this.cbNomerGpoupi.SelectedIndexChanged += new System.EventHandler(this.cbNomerGpoupi_SelectedIndexChanged);
             // 
@@ -198,19 +210,21 @@
             this.tbCreateGroup.Controls.Add(this.btnUpdate);
             this.tbCreateGroup.Controls.Add(this.btnDelete);
             this.tbCreateGroup.Controls.Add(this.btnAdd);
-            this.tbCreateGroup.Location = new System.Drawing.Point(4, 29);
+            this.tbCreateGroup.Location = new System.Drawing.Point(4, 22);
+            this.tbCreateGroup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbCreateGroup.Name = "tbCreateGroup";
-            this.tbCreateGroup.Padding = new System.Windows.Forms.Padding(3);
-            this.tbCreateGroup.Size = new System.Drawing.Size(371, 178);
+            this.tbCreateGroup.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbCreateGroup.Size = new System.Drawing.Size(245, 111);
             this.tbCreateGroup.TabIndex = 1;
             this.tbCreateGroup.Text = "Создать группу";
             // 
             // GroupForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(386, 231);
+            this.ClientSize = new System.Drawing.Size(257, 161);
             this.Controls.Add(this.tcGroup);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "GroupForm";
             this.Text = "Группа";
             this.tcGroup.ResumeLayout(false);

@@ -16,9 +16,9 @@ namespace Compo
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen; //Расположение окна по центру монитора
             this.FormBorderStyle = FormBorderStyle.FixedToolWindow;//Добавление иконки приложения
-            //Icon iconForm = new Icon(Application.StartupPath + "\\img\\Compo.ico");
-            //Icon = iconForm;
-            
+            Icon iconForm = new Icon(Application.StartupPath + "\\img\\compo2.ico");
+            Icon = iconForm;
+
         }
 
         private void btnAddStatus_Click(object sender, EventArgs e)

@@ -17,8 +17,8 @@ namespace Compo
             this.TopMost = true; //Вызов окна поверх других
             this.StartPosition = FormStartPosition.CenterScreen; //Расположение окна по центру монитора
             this.FormBorderStyle = FormBorderStyle.FixedToolWindow;//Добавление иконки приложения
-            //Icon iconForm = new Icon(Application.StartupPath + "\\img\\Compo.ico");
-            //Icon = iconForm;
+            Icon iconForm = new Icon(Application.StartupPath + "\\img\\compo2.ico");
+            Icon = iconForm;
             tbPassword.PasswordChar = '*';
             this.Text = "Окно Авторизации";
             lblAutorization.Text = "Авторизация";

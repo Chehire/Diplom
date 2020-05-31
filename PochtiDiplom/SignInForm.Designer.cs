@@ -39,12 +39,13 @@
             // 
             // tbLogin
             // 
-            this.tbLogin.Location = new System.Drawing.Point(20, 234);
+            this.tbLogin.Location = new System.Drawing.Point(18, 234);
             this.tbLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbLogin.MaxLength = 16;
             this.tbLogin.Name = "tbLogin";
             this.tbLogin.Size = new System.Drawing.Size(331, 26);
             this.tbLogin.TabIndex = 0;
+            this.tbLogin.Text = "Root";
             // 
             // lblAutorization
             // 
@@ -59,7 +60,7 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(20, 342);
+            this.btnOK.Location = new System.Drawing.Point(18, 342);
             this.btnOK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(166, 54);
@@ -71,7 +72,7 @@
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
-            this.lblLogin.Location = new System.Drawing.Point(15, 209);
+            this.lblLogin.Location = new System.Drawing.Point(18, 209);
             this.lblLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(55, 20);
@@ -86,6 +87,7 @@
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(331, 26);
             this.tbPassword.TabIndex = 1;
+            this.tbPassword.Text = "Pa$$w0rd";
             // 
             // LblPassword
             // 

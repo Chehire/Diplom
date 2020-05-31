@@ -23,8 +23,8 @@ namespace Compo
         public MainForm()
         {
             InitializeComponent();//Добавление иконки приложения
-            //Icon iconForm = new Icon(Application.StartupPath + "\\img\\Compo.ico");
-            //Icon = iconForm;
+            Icon iconForm = new Icon(Application.StartupPath + "\\img\\compo2.ico");
+            Icon = iconForm;
             this.Text = "Compo";
             DataGridLocation();
             Dolj();
@@ -32,7 +32,6 @@ namespace Compo
             dataGridView1.RowHeadersVisible = false;
             LichniyKabinet();
             DataGridLocation();
-            chart_statistic.Visible = false;
         }
 
 
@@ -45,16 +44,7 @@ namespace Compo
         {
             dataGridView1.Top = 50;
             dataGridView1.Left = 12;
-            chart_statistic.Top = 50;
             dataGridView1.Height = ClientSize.Height - 60;
-            if (chart_statistic.Visible == true)
-            {
-                dataGridView1.Width = ClientSize.Width - chart_statistic.Width - 20;
-                chart_statistic.Left = dataGridView1.Width + 20;
-            }
-            else dataGridView1.Width = ClientSize.Width - 20;
-
-
         }
 
         private void ВыходToolStripMenuItem_Click(object sender, EventArgs e)
@@ -92,42 +82,23 @@ namespace Compo
             {
                 Restriction();
             }
-            if (Program.ID_Dolj == 2) //Генеральный директор
+            if (Program.ID_Dolj == 2) //Cтарший инженер
             {
                 Restriction();
-            }
-            if (Program.ID_Dolj == 3) //Главный бухгалтер
-            {
-                Restriction();
-            }
-            if (Program.ID_Dolj == 4) //Бухгалтер
-            {
-                Restriction();
-                //doljToolStripMenuItem.Visible = false;
-                //employeeListToolStripMenuItem.Visible = false;
-                //TTToolStripMenuItem.Visible = false;
-                //ZayavkaToolStripMenuItem.Visible = false;
-                //TipRabotoolStripMenuItem.Visible = false;
+                doljToolStripMenuItem.Visible = false;
+                employeeListToolStripMenuItem.Visible = false;
+                StatusToolStripMenuItem.Visible = false;
+                TipRabotoolStripMenuItem.Visible = false;
 
             }
-            if (Program.ID_Dolj == 5) //Cтарший инженер
+            if (Program.ID_Dolj == 3) //Инженер
             {
                 Restriction();
-                //doljToolStripMenuItem.Visible = false;
-                //employeeListToolStripMenuItem.Visible = false;
-                //TTToolStripMenuItem.Visible = false;
-                //TipRabotoolStripMenuItem.Visible = false;
-                //GroupToolStripMenuItem.Visible = false;
-                //StatusToolStripMenuItem.Visible = false;
-
-            }
-            if (Program.ID_Dolj == 6) //Инженер
-            {
-                Restriction();
-                //TTToolStripMenuItem.Visible = false;
-                //GroupToolStripMenuItem.Visible = false;
-                //ZayavkaToolStripMenuItem.Visible = false;
-                //TipRabotoolStripMenuItem.Visible = false;
+                doljToolStripMenuItem.Visible = false;
+                employeeListToolStripMenuItem.Visible = false;
+                TTToolStripMenuItem.Visible = false;
+                StatusToolStripMenuItem.Visible = false;
+                TipRabotoolStripMenuItem.Visible = false;
             }
         }
 
@@ -140,6 +111,7 @@ namespace Compo
             StatusToolStripMenuItem.Visible = true;
             ZayavkaToolStripMenuItem.Visible = true;
             TipRabotoolStripMenuItem.Visible = true;
+            VipolnennieRabotiToolStripMenuItem.Visible = true;
         }
 
         private void DataGridView1_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
@@ -330,7 +302,7 @@ namespace Compo
                 if (Program.ID_Dolj == 1)
                     dataGridView1.DataSource = database.TableFill("select * from View_Group", database.DatabaseSQL()).Tables[0];
                 else
-                    dataGridView1.DataSource = database.TableFill("select 'ФИО','Номер группы','Дата'from from View_Group where [Group_Logical_Delete] = 0", database.DatabaseSQL()).Tables[0];
+                    dataGridView1.DataSource = database.TableFill("select * from View_Group", database.DatabaseSQL()).Tables[0];
             }
             database.DatabaseSQL().Close();
         }
@@ -357,9 +329,7 @@ namespace Compo
                 if (Program.ID_Dolj == 1)
                     dataGridView1.DataSource = database.TableFill("select * from View_Zayavka", database.DatabaseSQL()).Tables[0];
                 else
-                    dataGridView1.DataSource = database.TableFill("Select 'ID', '№ Группы', 'ТТ', 'Адрес ТТ', 'Статус', 'Дата подачи', 'Дата начала работ',"+
-                    "'Дата окончания работ','Дата закрытия заявки','Список работ','Список материалов', 'Комментарий торговой точки','Комментарий группы'"+
-                    "from View_Zayavka where [Zayavka_Logical_Delete] = 0 ", database.DatabaseSQL()).Tables[0];
+                    dataGridView1.DataSource = database.TableFill("Select [ID], [№ Группы], [ТТ], [Адрес ТТ], [Статус], [Дата подачи], [Дата начала работ],[Дата окончания работ],[Дата закрытия заявки],[Список работ],[Список материалов], [Комментарий торговой точки],[Комментарий группы] from View_Zayavka where [Zayavka_Logical_Delete] = 0 ", database.DatabaseSQL()).Tables[0];
 
             }
             database.DatabaseSQL().Close();
@@ -380,10 +350,13 @@ namespace Compo
 
         private void ShowVipolnennieraboti()
         {
-            this.Text = "Compo | Выполненные раоты";
+            this.Text = "Compo | Выполненные работы";
             database.DatabaseSQL().Open();
             {
+                if (Program.ID_Dolj == 1)
                     dataGridView1.DataSource = database.TableFill("select * from View_Vip_no_Rabot", database.DatabaseSQL()).Tables[0];
+                else
+                    dataGridView1.DataSource = database.TableFill("select [ID],[ТТ],[Тип работы] from View_Vip_no_Rabot where [Vip_no_Rabot_Logical_Delete] = 0  ", database.DatabaseSQL()).Tables[0];
             }
             database.DatabaseSQL().Close();
         }
@@ -454,9 +427,11 @@ namespace Compo
                 TipRabot.ShowDialog();
             }
 
-            if (this.Text == "Compo | Выполненные раоты")
+            if (this.Text == "Compo | Выполненные работы")
             {
                 Vip_no_RabotForm Vip_no_Rabot = new Vip_no_RabotForm();
+                Vip_no_Rabot.btnUpdate.Enabled = false;
+                Vip_no_Rabot.btnDelete.Enabled = false;
                 Vip_no_Rabot.ShowDialog();
             }
         }
@@ -541,6 +516,13 @@ namespace Compo
                 TipRabot.tbTipRabot.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
                 TipRabot.btnAdd.Enabled = false;
                 TipRabot.ShowDialog();
+            }
+
+            if (this.Text == "Compo | Выполненные работы")
+            {
+                Vip_no_RabotForm Vip_no_Rabot = new Vip_no_RabotForm();
+                Vip_no_Rabot.btnAdd.Enabled = false;
+                Vip_no_Rabot.ShowDialog();
             }
         }
 
@@ -628,7 +610,7 @@ namespace Compo
                 case "Compo | Типы работ":
                     ShowTipRabot();
                     break;
-                case "Compo | Выполненные раоты":
+                case "Compo | Выполненные работы":
                     ShowVipolnennieraboti();
                     break;
             }
@@ -818,36 +800,6 @@ namespace Compo
             PdfClass pdfClass = new PdfClass();
             await Task.Run(() => pdfClass.ExportWordToPdf(fileDialog.FileName));
         }
-
-        private void staticToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (chart_statistic.Visible == false)
-            {
-                chart_statistic.Visible = true;
-                DataGridLocation();
-                Statistic();
-            }
-            else
-            {
-                chart_statistic.Visible = false;
-                DataGridLocation();
-            }
-        }
-
-        private void Statistic()
-        {
-            //bal1 - это первая переменная, дата
-            //bal2 - вторая переменная 
-            chart_statistic.Series[0].Points.Clear();
-            int ss = 0;
-            while (ss < dataGridView1.Rows.Count)
-            {
-                var bal1 = dataGridView1.Rows[ss].Cells[4].Value;
-                var bal2 = dataGridView1.Rows[ss].Cells[6].Value;
-                chart_statistic.Series[0].Points.AddXY(Convert.ToString(bal2), Convert.ToString(bal1)); ss++;
-            }
-        }
-
     }
 }
 

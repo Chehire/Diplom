@@ -25,8 +25,8 @@ namespace Compo
             this.FormBorderStyle = FormBorderStyle.FixedToolWindow;//Добавление иконки приложения
             this.StartPosition = FormStartPosition.CenterScreen; //Расположение окна по центру монитора
             this.FormBorderStyle = FormBorderStyle.FixedToolWindow;//Добавление иконки приложения
-            //Icon iconForm = new Icon(Application.StartupPath + "\\img\\Compo.ico");
-            //Icon = iconForm;
+            Icon iconForm = new Icon(Application.StartupPath + "\\img\\compo2.ico");
+            Icon = iconForm;
             this.Text = "Cотрудник";
             lblFam.Text = "Фамилия";
             lblName.Text = "Имя";
@@ -129,6 +129,7 @@ namespace Compo
                 sqlCommand.Parameters.AddWithValue("@Ser_Pas", mtbSer.Text);
                 sqlCommand.Parameters.AddWithValue("@Num_Pas", mtbNum.Text);
                 sqlCommand.Parameters.AddWithValue("@Dolj_ID", Program.ID_Position);
+                sqlCommand.Parameters.AddWithValue("@Date_Birth", mtbDateBirth.Text);
                 sqlCommand.ExecuteNonQuery();
                 MessageBox.Show("Сотрудник изменен");
                 this.Hide();

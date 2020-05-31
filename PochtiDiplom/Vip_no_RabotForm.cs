@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Word = Microsoft.Office.Interop.Word;
 
 namespace Compo
 {
@@ -18,9 +19,10 @@ namespace Compo
         {
             this.TopMost = true; //Вызов окна поверх других
             InitializeComponent();
+            Icon iconForm = new Icon(Application.StartupPath + "\\img\\compo2.ico");
+            Icon = iconForm;
             this.StartPosition = FormStartPosition.CenterScreen; //Расположение окна по центру монитора
             this.FormBorderStyle = FormBorderStyle.FixedToolWindow;//Добавление иконки приложения
-            InitializeComponent();
             UpdateForm();
             ShowComboBox();
         }
@@ -34,13 +36,14 @@ namespace Compo
         {
             database.DatabaseSQL().Open();
             {
-                cbZayavka.DataSource = database.TableFill("select ТТ from dbo.View_Zayavka", database.DatabaseSQL()).Tables[0];
-                cbZayavka.DisplayMember = "TT";
-                cbTip_Rabot.DataSource = database.TableFill("select Name_Tip_Rabot from [dbo].[Tip_Rabot]", database.DatabaseSQL()).Tables[0];
-                cbTip_Rabot.DisplayMember = "Name_Tip_Rabot";
+                cbZayavka.DataSource = database.TableFill("select ТТ from [dbo].[View_Zayavka]", database.DatabaseSQL()).Tables[0];
+                cbZayavka.DisplayMember = "ТТ";
+                cbTip_Rabot.DataSource = database.TableFill("select [Name_Tip_Rabot] as Name  from [dbo].[Tip_Rabot]", database.DatabaseSQL()).Tables[0];
+                cbTip_Rabot.DisplayMember = "Name";
             }
             database.DatabaseSQL().Close();
         }
+
 
         private void cbZayavka_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -48,8 +51,8 @@ namespace Compo
             {
                 database.DatabaseSQL().Open();
                 {
-                    SqlCommand cmd = new SqlCommand($"select ID_Zayavka from [dbo].[Zayavka] where ТТ = '{cbZayavka.Text}'", database.DatabaseSQL());
-                    Program.ID_Zayavka = (int)cmd.ExecuteScalar();
+                    SqlCommand com = new SqlCommand($"select [ID] from [dbo].[View_Zayavka] where [ТТ] = '{cbZayavka.Text}'", database.DatabaseSQL());
+                    Program.ID_Zayavka = (int)com.ExecuteScalar();
                 }
                 database.DatabaseSQL().Close();
             }
@@ -62,7 +65,7 @@ namespace Compo
             {
                 database.DatabaseSQL().Open();
                 {
-                    SqlCommand cmd = new SqlCommand($"select ID_ID_Tip_Rabot from [dbo].[Tip_Rabot] where Name_Tip_Rabot = '{cbZayavka.Text}'", database.DatabaseSQL());
+                    SqlCommand cmd = new SqlCommand($"select ID_Tip_Rabot from [dbo].[Tip_Rabot] where Name_Tip_Rabot = '{cbTip_Rabot.Text}'", database.DatabaseSQL());
                     Program.ID_TipRabot = (int)cmd.ExecuteScalar();
                 }
                 database.DatabaseSQL().Close();
@@ -102,7 +105,7 @@ namespace Compo
                 sqlCommand.Parameters.AddWithValue("@Zayavka_ID", Program.ID_Zayavka);
                 sqlCommand.Parameters.AddWithValue("@Tip_Rabot_ID", Program.ID_TipRabot);
                 sqlCommand.ExecuteNonQuery();
-                MessageBox.Show("Тип выполненной работы обновлен");
+                MessageBox.Show("Тип выполненной работы обновлен"+ "Program.ID_TipRabot = " + Program.ID_TipRabot.ToString()+ "Program.ID_Zayavka = " + Program.ID_Zayavka.ToString());
                 this.Hide();
             }
             catch (Exception ex)
@@ -141,5 +144,8 @@ namespace Compo
             }
             database.DatabaseSQL().Close();
         }
+
+      
+        
     }
 }
