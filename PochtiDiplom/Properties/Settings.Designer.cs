@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DryCleaning.Properties {
+namespace Diplom.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

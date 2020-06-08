@@ -11,23 +11,17 @@ using System.Windows.Forms;
 
 namespace Compo
 {
-    public partial class TipRabotForm : Form
+    public partial class TTForm : Form
     {
         DatabaseConnection database = new DatabaseConnection();
-        public TipRabotForm()
+        public TTForm()
         {
             this.TopMost = true; //Вызов окна поверх других
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen; //Расположение окна по центру монитора
             this.FormBorderStyle = FormBorderStyle.FixedToolWindow;//Добавление иконки приложения
-            Icon iconForm = new Icon(Application.StartupPath + "\\img\\compo2.ico");
-            Icon = iconForm;
-            UpdateForm();
-        }
-
-        private void UpdateForm()
-        {
-         
+            //Icon iconForm = new Icon(Application.StartupPath + "\\img\\Compo.ico");
+            //Icon = iconForm;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -35,17 +29,19 @@ namespace Compo
             database.DatabaseSQL().Open();
             try
             {
-                SqlCommand sqlCommand = new SqlCommand("Tip_Rabot_Insert", database.DatabaseSQL());
+                SqlCommand sqlCommand = new SqlCommand("TT_Insert", database.DatabaseSQL());
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.AddWithValue("@Name_Tip_Rabot", tbTipRabot.Text);
-                sqlCommand.Parameters.AddWithValue("@Tip_Rabot_Logical_Delete", 0);
+                sqlCommand.Parameters.AddWithValue("@TT_Name", tbNameTT.Text);
+                sqlCommand.Parameters.AddWithValue("@Kol_vo_Ust_nix_Polok", tbPrice.Text);
+                sqlCommand.Parameters.AddWithValue("@Adres", tbAdres.Text);
+                sqlCommand.Parameters.AddWithValue("@TT_Logical_Delete",0);
                 sqlCommand.ExecuteNonQuery();
-                MessageBox.Show("Тип работ добавлен");
+                MessageBox.Show("Торговая точка добавлена");
                 this.Hide();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Тип работ добавлен не добавлен " + ex.Message);
+                MessageBox.Show("Торговая точка не добавлена " + ex.Message);
             }
             database.DatabaseSQL().Close();
         }
@@ -55,17 +51,19 @@ namespace Compo
             database.DatabaseSQL().Open();
             try
             {
-                SqlCommand sqlCommand = new SqlCommand("Tip_Rabot_Update", database.DatabaseSQL());
+                SqlCommand sqlCommand = new SqlCommand("TT_Update", database.DatabaseSQL());
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.AddWithValue("@ID_Tip_Rabot", Program.ID_TipRabot);
-                sqlCommand.Parameters.AddWithValue("@Name_Tip_Rabot", tbTipRabot.Text);
+                sqlCommand.Parameters.AddWithValue("@ID_TT", Program.ID_TT);
+                sqlCommand.Parameters.AddWithValue("@TT_Name", tbNameTT.Text);
+                sqlCommand.Parameters.AddWithValue("@Kol_vo_Ust_nix_Polok", tbPrice.Text);
+                sqlCommand.Parameters.AddWithValue("@Adres", tbAdres.Text);
                 sqlCommand.ExecuteNonQuery();
-                MessageBox.Show("Тип работ добавлен изменен");
+                MessageBox.Show("Торговая точка изменена");
                 this.Hide();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Тип работ добавлен не изменен " + ex.Message);
+                MessageBox.Show("Торговая точка изменена " + ex.Message);
             }
             database.DatabaseSQL().Close();
         }
@@ -77,24 +75,24 @@ namespace Compo
             {
                 if (Program.ID_Dolj == 1)
                 {
-                    SqlCommand sqlCommand = new SqlCommand("Tip_Rabot_Delete", database.DatabaseSQL());
+                    SqlCommand sqlCommand = new SqlCommand("TT_Delete", database.DatabaseSQL());
                     sqlCommand.CommandType = CommandType.StoredProcedure;
-                    sqlCommand.Parameters.AddWithValue("@ID_Tip_Rabot", Program.ID_TipRabot);
+                    sqlCommand.Parameters.AddWithValue("@ID_TT", Program.ID_TT);
                     sqlCommand.ExecuteNonQuery();
                 }
                 else
                 {
-                    SqlCommand sqlCommand = new SqlCommand("Tip_Rabot_Logical_Delete", database.DatabaseSQL());
+                    SqlCommand sqlCommand = new SqlCommand("TT_Logical_Delete", database.DatabaseSQL());
                     sqlCommand.CommandType = CommandType.StoredProcedure;
-                    sqlCommand.Parameters.AddWithValue("@ID_Tip_Rabot", Program.ID_TipRabot);
+                    sqlCommand.Parameters.AddWithValue("@ID_TT", Program.ID_TT);
                     sqlCommand.ExecuteNonQuery();
                 }
-                MessageBox.Show("Тип работ добавлен удален");
+                MessageBox.Show("Торговая точка удалена");
                 this.Hide();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Тип работ добавлент не удален " + ex.Message);
+                MessageBox.Show("Торговая точка не удалена " + ex.Message);
             }
             database.DatabaseSQL().Close();
         }

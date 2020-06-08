@@ -72,8 +72,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(502, 500);
+            this.ClientSize = new System.Drawing.Size(502, 507);
             this.Controls.Add(label1);
             this.Controls.Add(this.progressBar1);
             this.DoubleBuffered = true;

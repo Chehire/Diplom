@@ -129,18 +129,8 @@ create table[dbo].[Zayavka]
 	references [TT] ([ID_TT]),
 	constraint [FK_Status] foreign key ([Status_ID])
 	references [Status] ([ID_Status]),
-	--constraint [CH_Spisok_Rapot_Cyrill_Upper] check ([Spisok_Rapot] like ('%[À-ß]%')),
-	--constraint [CH_Spisok_Rapot_Cyrill_Lower] check ([Spisok_Rapot] like ('%[à-ÿ]%')),
-	--constraint [CH_Spisok_Rapot_Spec_Numbers] check ([Spisok_Rapot] like ('%[0-9]%')),
-	--constraint [CH_Spisok_Materialov_Cyrill_Upper] check ([Spisok_Materialov] like ('%[À-ß]%')),
-	--constraint [CH_Spisok_Materialov_Cyrill_Lower] check ([Spisok_Materialov] like ('%[à-ÿ]%')),
-	--constraint [CH_Spisok_Materialov_Spec_Numbers] check ([Spisok_Materialov] like ('%[0-9]%')),
-	--constraint [CH_Kommentariy_TT_Cyrill_Upper] check ([Kommentariy_TT] like ('%[À-ß]%')),
-	--constraint [CH_Kommentariy_TT_Cyrill_Lower] check ([Kommentariy_TT] like ('%[à-ÿ]%')),
-	--constraint [CH_Kommentariy_TT_Spec_Numbers] check ([Kommentariy_TT] like ('%[0-9]%')),
-	--constraint [CH_Kommentariy_Group_Cyrill_Upper] check ([Kommentariy_Group] like ('%[À-ß]%')),
-	--constraint [CH_Kommentariy_Group_Cyrill_Lower] check ([Kommentariy_Group] like ('%[à-ÿ]%')),
-	--constraint [CH_Kommentariy_Group_Spec_Numbers] check ([Kommentariy_Group] like ('%[0-9]%')),
+	constraint [FK_Group] foreign key ([Group_ID])
+	references [Group] ([ID_Group]),
 	constraint [CH_Zayavka_Logical_Delete] check ([Zayavka_Logical_Delete] in (0,1))
 )
 go
@@ -188,9 +178,10 @@ FROM   dbo.Dolj INNER JOIN
              dbo.Sotr ON dbo.Dolj.ID_Dolj = dbo.Sotr.Dolj_ID
 go
 
-create view [dbo].[View_Group]("¹ Ãðóïïû","ÔÈÎ","Äàòà")
+create view [dbo].[View_Group]("ID","¹ Ãðóïïû","ÔÈÎ","Äàòà")
 as
 SELECT 
+	dbo.[Sostav_Group].ID,
 	dbo.[Group].ID_Group, 
 	dbo.Sotr.Fam_Sotr+' '+dbo.Sotr.Name_Sotr+' '+dbo.Sotr.Otch_Sotr, 
 	dbo.[Group].Date
@@ -247,7 +238,11 @@ create view [dbo].[View_Vip_no_Rabot]
 	"Vip_no_Rabot_Logical_Delete"
 )
 as
-SELECT dbo.Vip_no_Rabot.ID_Vip_no_Rabot, dbo.Tip_Rabot.Name_Tip_Rabot, dbo.TT.TT_Name,dbo.Vip_no_Rabot.Vip_no_Rabot_Logical_Delete
+SELECT 
+	dbo.Vip_no_Rabot.ID_Vip_no_Rabot, 
+	dbo.Tip_Rabot.Name_Tip_Rabot, 
+	dbo.TT.TT_Name,
+	dbo.Vip_no_Rabot.Vip_no_Rabot_Logical_Delete
 FROM   dbo.Vip_no_Rabot INNER JOIN
              dbo.Zayavka ON dbo.Vip_no_Rabot.Zayavka_ID = dbo.Zayavka.ID_Zayavka INNER JOIN
              dbo.Tip_Rabot ON dbo.Vip_no_Rabot.Tip_Rabot_ID = dbo.Tip_Rabot.ID_Tip_Rabot INNER JOIN
@@ -616,8 +611,7 @@ create procedure [dbo].[Zayavka_Update]
 	@Spisok_Rapot[varchar](255),
 	@Spisok_Materialov[varchar](255),
 	@Kommentariy_TT[varchar](255),
-	@Kommentariy_Group[varchar](255),
-	@Zayavka_Logical_Delete [int]
+	@Kommentariy_Group[varchar](255)
 as
 update [dbo].[Zayavka] set
 	[Group_ID]=@Group_ID,
